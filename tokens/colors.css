@@ -1,0 +1,72 @@
+/* ─────────────────────────────────────────
+   Huella Local — Color Tokens
+   ──────────────────────────────────────── */
+
+:root {
+  /* ── Brand Scale ─────────────────────────────────────────── */
+
+  /* Azul (blue-gray) — primary identity */
+  --hl-azul-500: #7A80A3;   /* main brand blue-gray */
+
+  /* Naranja (warm orange) — accent & CTA */
+  --hl-naranja-500: #E28757;   /* warm orange */
+
+  /* Verde (greens) — brand mark, sustainability */
+  --hl-verde-mint: #8DC899;    /* mint green — official "huella" */
+  --hl-verde-moss: #78AA6D;    /* moss green — logo secondary */
+
+  /* Periwinkle (lavender blue) — social-post frame stripes, pills, duotone */
+  --hl-periwinkle: #8488BC;
+
+  /* Amarillo (golden yellow) */
+  --hl-amarillo-500: #FECC52;  /* golden yellow */
+
+  /* Carbón (charcoal) */
+  --hl-carbon-500: #4D4E56;    /* charcoal — primary text/dark */
+
+  /* Neutral grays */
+  --hl-gray-50:  #F7F8F9;
+  --hl-gray-100: #EFEFEF;
+  --hl-gray-150: #E4E5EA;
+  --hl-gray-200: #D1D3DC;
+  --hl-gray-300: #B0B2BF;
+  --hl-gray-400: #8A8C9A;
+  --hl-gray-500: #6B6D79;
+  --hl-gray-700: #4D4E56;   /* primary text */
+  --hl-gray-900: #1E1F24;
+
+  /* ── Semantic Aliases ─────────────────────────────────────── */
+
+  /* Brand */
+  --color-primary:      var(--hl-azul-500);
+  --color-accent:       var(--hl-naranja-500);
+  --color-brand-green:  var(--hl-verde-mint);
+
+  /* Text */
+  --color-text:             var(--hl-gray-700);
+  --color-text-muted:       var(--hl-gray-400);
+  --color-text-on-primary:  #ffffff;
+  --color-text-on-accent:   #ffffff;
+  --color-text-on-dark:     #ffffff;
+
+  /* Surface */
+  --color-surface:           #ffffff;
+  --color-surface-muted:     var(--hl-gray-50);
+  --color-surface-raised:    var(--hl-gray-100);
+  --color-surface-primary:   var(--hl-azul-500);
+  --color-surface-accent:    var(--hl-naranja-500);
+  --color-surface-green:     var(--hl-verde-mint);
+
+  /* Social post (Instagram) */
+  --color-post-frame:        var(--hl-periwinkle);  /* top stripe / pills */
+  --color-post-accent:       var(--hl-naranja-500); /* bottom stripe */
+  --color-post-bg:           #F1F1F4;               /* off-white canvas */
+
+  /* Border */
+  --color-border:             rgba(122, 128, 163, 0.18);
+  --color-border-strong:      rgba(122, 128, 163, 0.35);
+
+  /* Overlay (for photo tinting) */
+  --color-overlay-photo:      rgba(90, 95, 130, 0.60);
+  --color-overlay-dark:       rgba(0, 0, 0, 0.55);
+}

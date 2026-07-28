@@ -1,0 +1,43 @@
+<!-- @dsCard group="Type" viewport="700x220" name="Body & UI Text" subtitle="Body copy · labels · captions · overlines" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    body { margin: 0; padding: 18px 20px; background: var(--color-surface); font-family: var(--font-primary); }
+    .row { display: flex; gap: 16px; margin-bottom: 0; }
+    .col { flex: 1; }
+    .specimen + .specimen { margin-top: 12px; }
+    .meta { font-size: 9px; font-weight: 700; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 3px; }
+  </style>
+</head>
+<body>
+  <div class="row">
+    <div class="col">
+      <div class="specimen">
+        <div class="meta">Body — 400 · 16px · leading 1.55</div>
+        <div style="font-size:var(--text-base); font-weight:var(--font-regular); color:var(--color-text); line-height:var(--leading-normal);">El futuro de Los Andes se construye entre todas las personas. Revisa nuestras propuestas y danos tu opinión.</div>
+      </div>
+      <div class="specimen">
+        <div class="meta">Body bold — 700 · inline emphasis</div>
+        <div style="font-size:var(--text-base); font-weight:var(--font-regular); color:var(--color-text); line-height:var(--leading-normal);">Solo <strong>2 de cada 5</strong> proyectos de inversión llegan a territorios vulnerables.</div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="specimen">
+        <div class="meta">Overline — 700 · uppercase · 11px · wide tracking</div>
+        <div style="font-size:var(--text-xs); font-weight:var(--font-bold); color:var(--color-accent); text-transform:uppercase; letter-spacing:var(--tracking-widest);">Eje 1</div>
+      </div>
+      <div class="specimen">
+        <div class="meta">Label — 700 · 13px</div>
+        <div style="font-size:var(--text-sm); font-weight:var(--font-bold); color:var(--color-text); letter-spacing:var(--tracking-wide);">Ver medidas →</div>
+      </div>
+      <div class="specimen">
+        <div class="meta">Caption / muted — 400 · 13px</div>
+        <div style="font-size:var(--text-sm); font-weight:var(--font-regular); color:var(--color-text-muted); font-style:italic;">*Fuente: Corporación Ciudades y CChC, 2026.</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

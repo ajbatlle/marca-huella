@@ -1,0 +1,93 @@
+<!-- @dsCard group="Posts" viewport="1080x1350" name="Post — Cifra" subtitle="Pill periwinkle · cifras grandes en naranja · bajadas slate · logo color centrado" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: var(--post-w); height: var(--post-h); overflow: hidden;
+      font-family: var(--font-primary);
+      background: var(--color-post-bg);
+    }
+    .post {
+      width: var(--post-w); height: var(--post-h);
+      display: flex; flex-direction: column;
+      background: var(--color-post-bg);
+    }
+    .stripe-top    { flex: none; height: var(--post-stripe); background: var(--color-post-frame); }
+    .stripe-bottom { flex: none; height: var(--post-stripe); background: var(--color-post-accent); }
+
+    /* Intro pill */
+    .intro {
+      flex: none;
+      display: flex; justify-content: center;
+      padding: 32px var(--post-margin) 0;
+    }
+    .pill {
+      background: var(--color-post-frame);
+      color: #ffffff;
+      font-size: 30px; font-weight: var(--font-bold);
+      padding: 12px 28px;
+      border-radius: var(--radius-sm);
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    /* Stats */
+    .stats {
+      flex: 1;
+      display: flex; flex-direction: column; justify-content: center;
+      gap: var(--space-12);
+      padding: var(--space-8) var(--post-margin);
+    }
+    .stat { text-align: center; }
+    .stat-num {
+      font-size: 180px; font-weight: var(--font-bold); line-height: 0.9;
+      color: var(--hl-naranja-500); letter-spacing: -0.03em;
+    }
+    .stat-desc {
+      margin-top: var(--space-3);
+      font-size: 48px; font-weight: var(--font-regular); line-height: 1.14;
+      color: var(--hl-azul-500);
+      max-width: 760px; margin-left: auto; margin-right: auto;
+      text-wrap: pretty;
+    }
+
+    /* Footer logo */
+    .footer {
+      flex: none;
+      display: flex; justify-content: center;
+      padding: 0 var(--post-margin) 32px;
+    }
+    .footer img { height: 60px; width: auto; display: block; }
+  </style>
+</head>
+<body>
+  <div class="post">
+    <div class="stripe-top"></div>
+
+    <div class="intro">
+      <span class="pill">En 9 años, desde Huella Local hemos aportado</span>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-num">47</div>
+        <p class="stat-desc">nuevas plazas y áreas verdes entregadas a las comunidades</p>
+      </div>
+      <div class="stat">
+        <div class="stat-num">12.400</div>
+        <p class="stat-desc">vecinos y vecinas beneficiados directamente</p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <img src="../assets/brand/logo-color-v2.svg" alt="Huella Local">
+    </div>
+
+    <div class="stripe-bottom"></div>
+  </div>
+</body>
+</html>

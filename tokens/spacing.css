@@ -1,0 +1,67 @@
+/* ─────────────────────────────────────────
+   Huella Local — Spacing, Radius & Shadow
+   ──────────────────────────────────────── */
+
+:root {
+  /* ── Spacing scale (4px base) ─────────────────────────────── */
+  --space-0:  0px;
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  /* ── Border radius ────────────────────────────────────────── */
+  --radius-xs:   4px;
+  --radius-sm:   6px;
+  --radius-md:   10px;   /* cards, buttons */
+  --radius-lg:   16px;   /* modals, panels */
+  --radius-xl:   20px;
+  --radius-2xl:  28px;
+  --radius-full: 9999px; /* pills, badges */
+
+  /* ── Box shadows ──────────────────────────────────────────── */
+  --shadow-xs:      0 1px 4px rgba(0, 0, 0, 0.04);
+  --shadow-sm:      0 2px 8px rgba(0, 0, 0, 0.06);    /* card resting */
+  --shadow-md:      0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-lg:      0 12px 40px rgba(0, 0, 0, 0.12);  /* modals */
+  --shadow-xl:      0 24px 60px rgba(0, 0, 0, 0.16);
+  --shadow-azul:    0 6px 20px rgba(122, 128, 163, 0.22); /* card hover */
+  --shadow-naranja: 0 4px 15px rgba(226, 135, 87, 0.32);  /* button */
+
+  /* ── Outer / edge margins ─────────────────────────────────── */
+  /* Minimum safe gutter between content and ANY surface edge.
+     Nothing should sit flush to the edge — always reserve at least
+     the margin appropriate to the surface below. */
+  --margin-xs:  16px;   /* mobile screens, compact cards            */
+  --margin-sm:  24px;   /* web container side padding, tablet       */
+  --margin-md:  40px;   /* web section gutters, dense documents     */
+  --margin-lg:  64px;   /* document pages, posters                  */
+  --margin-xl:  80px;   /* generous editorial pages                 */
+
+  /* Slide safe area — keep all 1280×720 slide content inside this
+     inset from the slide edge (clear of the 8px azul stripes). */
+  --slide-margin-x: 72px;
+  --slide-margin-y: 52px;
+
+  /* ── Instagram social post ────────────────────────────────── */
+  /* Portrait 4:5 canvas. Periwinkle stripe on top, orange on bottom.
+     Keep all content inside --post-margin from the side edges. */
+  --post-w:       1080px;
+  --post-h:       1350px;
+  --post-margin:  72px;   /* content side gutter (clear of edges) */
+  --post-stripe:  24px;   /* frame stripe height (top/bottom)     */
+
+  /* ── Layout ───────────────────────────────────────────────── */
+  --container-max: 1100px;
+  --container-pad: 24px;   /* min side gutter — was 20px, see --margin-sm */
+  --section-pad-y: 80px;
+}

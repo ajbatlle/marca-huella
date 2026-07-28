@@ -1,0 +1,47 @@
+<!-- @dsCard group="Brand" viewport="700x340" name="Documentos — Formato Invitación" subtitle="Stripe azul arriba · stripe naranja abajo · line art ciudad" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; padding: 18px 20px; background: var(--color-surface-muted); font-family: var(--font-primary); }
+    .section-title { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-text-muted); margin: 0 0 10px; }
+    .doc { background: white; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm); }
+    .stripe-top { height: 10px; background: var(--hl-azul-500); }
+    .header { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px 12px; border-bottom: 1px solid var(--color-border); }
+    .body { padding: 16px 24px; font-size: 11px; color: var(--color-text); line-height: 1.7; }
+    .highlight { background: var(--color-accent); color: white; padding: 1px 6px; border-radius: 3px; font-weight: 700; }
+    .illus { width: 100%; display: block; }
+    .stripe-bot { height: 10px; background: var(--color-accent); }
+    .note { font-size: 9px; color: var(--color-text-muted); margin-top: 10px; line-height: 1.6; }
+    .note strong { color: var(--color-text); }
+    .note .dot { display: inline-block; width: 5px; height: 5px; border-radius: 50%; margin: 0 4px 1px; vertical-align: middle; }
+  </style>
+</head>
+<body>
+  <div class="section-title">Anatomía del documento formal (invitación, carta, convenio)</div>
+  <div class="doc">
+    <div class="stripe-top"></div>
+    <div class="header">
+      <div style="font-size:9px; color:var(--color-text-muted); font-style:italic;">[escudo del municipio]</div>
+      <img src="../assets/brand/logo-color-v2.svg" style="height:28px;" alt="huellalocal logo">
+    </div>
+    <div class="body">
+      <strong>Víctor Isla Lutz</strong>, alcalde de la Municipalidad, y <strong>Gonzalo Vial Luarte</strong>, director ejecutivo de Fundación Huella Local, tienen el agrado de invitar a la firma del convenio <strong>"Alianza por el Desarrollo Local".</strong><br><br>
+      La ceremonia se realizará el <span class="highlight">martes 23 de junio de 2026, a las 12:00 horas,</span> en dependencias de la Municipalidad.
+    </div>
+    <img class="illus" src="../assets/illustrations/vallenar.png" alt="Line art de la ciudad — ilustración documental">
+    <div class="stripe-bot"></div>
+  </div>
+  <div class="note">
+    <span style="font-weight:700; color:var(--color-text);">Estructura:</span>
+    <span class="dot" style="background:var(--hl-azul-500);"></span><strong>Stripe azul</strong> arriba &nbsp;·&nbsp;
+    <span class="dot" style="background:var(--color-accent);"></span><strong>Stripe naranja</strong> abajo &nbsp;·&nbsp;
+    Logo color en header (derecha) &nbsp;·&nbsp;
+    <strong>Ilustración line art</strong> de la ciudad específica a sangre en el pie &nbsp;·&nbsp;
+    Fecha destacada con pill naranja
+  </div>
+</body>
+</html>

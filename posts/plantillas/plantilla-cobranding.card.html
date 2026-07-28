@@ -1,0 +1,61 @@
+<!-- @dsCard group="Plantillas (sin texto)" viewport="1080x1350" name="Plantilla — Cobranding" subtitle="Fondo periwinkle · tarjeta blanca · zona de título · logos de aliados · logo Huella — sin texto" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: var(--post-w); height: var(--post-h); overflow: hidden;
+      font-family: var(--font-primary);
+      background: var(--color-post-frame);
+    }
+    .post {
+      width: var(--post-w); height: var(--post-h);
+      background: var(--color-post-frame);
+      padding: 64px;
+    }
+    .card {
+      width: 100%; height: 100%;
+      background: #ffffff;
+      border-radius: var(--radius-xl);
+      display: flex; flex-direction: column; align-items: center;
+      padding: 96px 72px;
+    }
+
+    .title { flex: none; height: 176px; width: 100%; }
+
+    .logos {
+      flex: 1;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 80px;
+    }
+    .row {
+      display: flex; align-items: center; justify-content: center;
+      gap: 90px;
+    }
+    .partner {
+      width: 300px; height: 200px;
+      border: 1px dashed var(--color-border-strong);
+      border-radius: var(--radius-md);
+    }
+    .huella { height: 92px; width: auto; display: block; }
+  </style>
+</head>
+<body>
+  <div class="post">
+    <div class="card">
+      <div class="title"></div>
+
+      <div class="logos">
+        <div class="row">
+          <div class="partner"></div>
+          <div class="partner"></div>
+        </div>
+        <img class="huella" src="../../assets/brand/logo-color-v2.svg" alt="Huella Local">
+      </div>
+    </div>
+  </div>
+</body>
+</html>

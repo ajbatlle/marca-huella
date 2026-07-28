@@ -1,0 +1,110 @@
+<!-- @dsCard group="Slides" viewport="1280x720" name="Content Slide — Pasos con íconos" subtitle="Enumeración / proceso de 4 pasos · íconos Material · colores de marca" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { width: 1280px; height: 720px; overflow: hidden; font-family: var(--font-primary); background: white; }
+    .slide { width: 1280px; height: 720px; display: flex; flex-direction: column; }
+    .stripe { height: 8px; background: var(--hl-azul-500); flex: none; }
+    .franja { flex: none; line-height: 0; }
+
+    .body { flex: 1; display: flex; flex-direction: column; padding: var(--slide-margin-y) var(--slide-margin-x); }
+
+    h2 { font-size: 42px; font-weight: 700; color: var(--color-primary); line-height: 1.1; margin-bottom: 16px; }
+    .accent-bar { width: 48px; height: 3px; background: var(--color-accent); border-radius: 2px; margin-bottom: 18px; }
+    .intro { font-size: 17px; line-height: 1.6; color: var(--color-text); max-width: 920px; }
+    .intro strong { font-weight: 700; color: var(--color-primary); }
+
+    /* Steps — flechas como hermanos del flex container */
+    .steps { margin-top: 44px; display: flex; align-items: flex-start; flex-wrap: nowrap; }
+    .step { flex: 1; min-width: 0; }
+    .block { display: flex; align-items: flex-start; justify-content: flex-start; }
+    .arrow {
+      flex: none; width: 48px;
+      padding-top: 18px;
+      display: flex; align-items: flex-start; justify-content: center;
+      color: var(--hl-gray-300);
+    }
+
+    .step-over { margin-top: 20px; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-text-muted); }
+    .step-title { margin-top: 4px; font-size: 21px; font-weight: 700; line-height: 1.15; }
+    .step-desc { margin-top: 8px; font-size: 14px; line-height: 1.55; color: var(--color-text); }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="stripe"></div>
+    <div class="body">
+      <h2>Cómo trabajamos</h2>
+      <div class="accent-bar"></div>
+      <p class="intro">
+        Articulamos a <strong>empresas, municipios y el Estado</strong> en un modelo de cuatro etapas que transforma el aporte privado en obras públicas de alto impacto social.
+      </p>
+
+      <div class="steps">
+
+        <!-- Paso 1 -->
+        <div class="step">
+          <div class="block">
+            <span class="material-icons" style="font-size: 62px; color: var(--hl-azul-500);">location_on</span>
+          </div>
+          <div class="step-over">Paso 01</div>
+          <div class="step-title" style="color:var(--hl-azul-500);">Diagnóstico</div>
+          <div class="step-desc">Identificamos junto al municipio las brechas de infraestructura y equipamiento más urgentes del territorio.</div>
+        </div>
+
+        <!-- Flecha 1→2 -->
+        <div class="arrow">
+          <span class="material-icons" style="font-size: 26px;">arrow_forward</span>
+        </div>
+
+        <!-- Paso 2 -->
+        <div class="step">
+          <div class="block">
+            <span class="material-icons" style="font-size: 62px; color: var(--hl-naranja-500);">handshake</span>
+          </div>
+          <div class="step-over">Paso 02</div>
+          <div class="step-title" style="color:var(--hl-naranja-500);">Alianza</div>
+          <div class="step-desc">Conectamos a las empresas aportantes con el gobierno local y firmamos el convenio de colaboración.</div>
+        </div>
+
+        <!-- Flecha 2→3 -->
+        <div class="arrow">
+          <span class="material-icons" style="font-size: 26px;">arrow_forward</span>
+        </div>
+
+        <!-- Paso 3 -->
+        <div class="step">
+          <div class="block">
+            <span class="material-icons" style="font-size: 62px; color: var(--hl-verde-mint);">paid</span>
+          </div>
+          <div class="step-over">Paso 03</div>
+          <div class="step-title" style="color:var(--hl-verde-mint);">Financiamiento</div>
+          <div class="step-desc">Formulamos el proyecto y desbloqueamos el financiamiento público que el municipio no accedería por sí solo.</div>
+        </div>
+
+        <!-- Flecha 3→4 -->
+        <div class="arrow">
+          <span class="material-icons" style="font-size: 26px;">arrow_forward</span>
+        </div>
+
+        <!-- Paso 4 -->
+        <div class="step">
+          <div class="block">
+            <span class="material-icons" style="font-size: 62px; color: var(--hl-carbon-500);">construction</span>
+          </div>
+          <div class="step-over">Paso 04</div>
+          <div class="step-title" style="color:var(--hl-carbon-500);">Ejecución</div>
+          <div class="step-desc">Ejecutamos las obras y medimos el impacto social en la comunidad beneficiada.</div>
+        </div>
+
+      </div>
+    </div>
+    <div class="franja"><img src="../assets/brand/franja-verde.png" alt="Franja Verde — Huella Local" style="width:100%; display:block;"></div>
+  </div>
+</body>
+</html>

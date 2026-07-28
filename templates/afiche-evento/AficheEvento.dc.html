@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Afiche de evento" description="Afiche vertical para seminarios y eventos — marco oscuro, titular en serif, expositores y panorama de Chile al pie" -->
+<helmet>
+  <script src="./ds-base.js"></script>
+  <script src="./image-slot.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body { margin:0; background:#2E313F; }
+  </style>
+</helmet>
+
+<div data-screen-label="Afiche evento" style="width:1080px;height:1350px;position:relative;overflow:hidden;box-sizing:border-box;border:12px solid #4D4E56;border-top-width:44px;background-image:url(../../assets/textures/azul-gradient.png);background-size:100% 100%;font-family:var(--font-primary,'Montserrat',sans-serif;);margin:0 auto;">
+  <img src="../../assets/textures/paper-noise.png" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.5;mix-blend-mode:multiply;pointer-events:none;">
+
+  <!-- Logos -->
+  <div style="display:flex;align-items:flex-start;justify-content:space-between;padding:36px 44px 0;">
+    <sc-if value="{{ mostrarMinisterio }}" hint-placeholder-val="{{ true }}">
+      <img src="../../assets/partners/mideso-blanco.png" alt="Ministerio de Desarrollo Social y Familia" style="height:64px;width:auto;display:block;">
+    </sc-if>
+    <img src="../../assets/brand/logo-blanco-v2.svg" alt="huellalocal®" style="height:34px;width:auto;display:block;margin-top:6px;">
+  </div>
+
+  <!-- Título -->
+  <div style="padding:46px 48px 0;">
+    <span style="display:inline-block;background:#ffffff;color:#E28757;font-family:var(--font-primary,'Montserrat',sans-serif);font-size:22px;font-weight:700;letter-spacing:0.01em;padding:9px 20px;border-radius:2px;">Seminario</span>
+    <h1 style="margin:26px 0 0;color:#ffffff;font-family:'Roboto Serif',serif;font-size:66px;line-height:1.08;letter-spacing:-0.01em;text-wrap:balance;">
+      <span style="font-weight:700;">{{ tituloParte1 }}</span><span style="font-weight:400;"> {{ tituloParte2 }} </span><span style="font-weight:700;">{{ tituloParte3 }}</span>
+    </h1>
+    <p style="margin:22px 0 0;background:#E28757;color:#ffffff;display:inline-block;padding:12px 20px;font-size:26px;font-weight:500;line-height:1.3;text-wrap:balance;">{{ bajadaNormal }} <span style="font-weight:700;">{{ bajadaBold }}</span></p>
+  </div>
+
+  <!-- Datos del evento -->
+  <div style="display:flex;flex-direction:column;gap:20px;padding:48px 48px 0;">
+    <div style="display:flex;align-items:center;gap:44px;">
+      <div style="display:flex;align-items:center;gap:16px;">
+        <div style="width:46px;height:46px;border-radius:50%;background:#ffffff;display:flex;align-items:center;justify-content:center;flex:none;">
+          <span class="icon" style="color:#E28757;font-size:26px;">calendar_month</span>
+        </div>
+        <span style="color:#ffffff;font-size:28px;font-weight:700;">{{ fecha }}</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:16px;">
+        <div style="width:46px;height:46px;border-radius:50%;background:#ffffff;display:flex;align-items:center;justify-content:center;flex:none;">
+          <span class="icon" style="color:#E28757;font-size:26px;">schedule</span>
+        </div>
+        <span style="color:#ffffff;font-size:28px;font-weight:700;">{{ hora }}</span>
+      </div>
+    </div>
+    <div style="display:flex;align-items:flex-start;gap:16px;">
+      <div style="width:46px;height:46px;border-radius:50%;background:#E28757;display:flex;align-items:center;justify-content:center;flex:none;margin-top:2px;">
+        <span class="icon" style="color:#ffffff;font-size:26px;">location_on</span>
+      </div>
+      <div>
+        <p style="margin:0;color:#ffffff;font-size:28px;font-weight:700;line-height:1.25;">{{ lugarNombre }}</p>
+        <p style="margin:2px 0 0;color:rgba(255,255,255,0.85);font-size:21px;font-weight:500;line-height:1.3;">{{ lugarDetalle }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Expositores -->
+  <div style="flex:none;display:flex;justify-content:center;gap:36px;padding:72px 48px 0;">
+    <sc-for list="{{ expositores }}" as="persona" hint-placeholder-count="3">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:14px;width:270px;">
+        <image-slot id="afiche-expositor-{{ $index }}" shape="circle" placeholder="Foto B/N" style="width:230px;height:230px;"></image-slot>
+        <p style="margin:0;color:#33343D;font-size:23px;font-weight:700;text-align:center;line-height:1.25;">{{ persona.nombre }}</p>
+        <p style="margin:0;color:#54555E;font-size:19px;font-weight:500;text-align:center;line-height:1.3;">{{ persona.cargo }}</p>
+      </div>
+    </sc-for>
+  </div>
+
+  <!-- Panorama de Chile -->
+  <div style="position:absolute;left:0;right:0;bottom:12px;">
+    <img src="../../assets/illustrations/chile-panorama-lineart.png" alt="Panorama de Chile" style="width:100%;display:block;">
+  </div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;$preview&quot;: { &quot;width&quot;: 1080, &quot;height&quot;: 1350 },
+  &quot;mostrarMinisterio&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Afiche&quot; },
+  &quot;tituloParte1&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Alianzas&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Titular&quot; },
+  &quot;tituloParte2&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;que dejan&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Titular&quot; },
+  &quot;tituloParte3&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Huella&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Titular&quot; },
+  &quot;bajadaNormal&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Evidencia y aprendizajes&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Titular&quot; },
+  &quot;bajadaBold&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;para fortalecer los territorios&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Titular&quot; },
+  &quot;fecha&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Martes 4 de agosto de 2026&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Evento&quot; },
+  &quot;hora&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;9:00 horas&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Evento&quot; },
+  &quot;lugarNombre&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Auditorio Fernando Castillo Velasco&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Evento&quot; },
+  &quot;lugarDetalle&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Campus Lo Contador de la Pontificia Universidad Católica de Chile&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Evento&quot; }
+}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      mostrarMinisterio: this.props.mostrarMinisterio ?? true,
+      tituloParte1: this.props.tituloParte1 ?? 'Alianzas',
+      tituloParte2: this.props.tituloParte2 ?? 'que dejan',
+      tituloParte3: this.props.tituloParte3 ?? 'Huella',
+      bajadaNormal: this.props.bajadaNormal ?? 'Evidencia y aprendizajes',
+      bajadaBold: this.props.bajadaBold ?? 'para fortalecer los territorios',
+      fecha: this.props.fecha ?? 'Martes 4 de agosto de 2026',
+      hora: this.props.hora ?? '9:00 horas',
+      lugarNombre: this.props.lugarNombre ?? 'Auditorio Fernando Castillo Velasco',
+      lugarDetalle: this.props.lugarDetalle ?? 'Campus Lo Contador de la Pontificia Universidad Católica de Chile',
+      expositores: this.props.expositores ?? [
+        { nombre: 'Nombre Apellido', cargo: 'Cargo, Organización' },
+        { nombre: 'Nombre Apellido', cargo: 'Cargo, Organización' },
+        { nombre: 'Nombre Apellido', cargo: 'Cargo, Organización' },
+      ],
+    };
+  }
+}
+
+</script>
+</body>
+</html>

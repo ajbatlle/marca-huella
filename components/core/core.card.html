@@ -1,0 +1,87 @@
+<!-- @dsCard group="Components" viewport="700x520" name="Core Components" subtitle="Button · Badge · StatDisplay · EjeCard · DataTable" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../../styles.css">
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="../../_ds_bundle.js"></script>
+  <style>
+    body { margin: 0; padding: 18px 20px; background: var(--color-surface-muted); font-family: var(--font-primary); }
+    .lbl { font-size: 10px; font-weight: 700; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+    .grp { margin-bottom: 14px; }
+    .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+    .g3  { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+    const { Button, Badge, Card, StatDisplay, EjeCard, DataTable } = window.HuellaLocalDesignSystem_59d6d2;
+
+    function Demo() {
+      return (
+        <div>
+          <div className="grp">
+            <div className="lbl">Button</div>
+            <div className="row">
+              <Button variant="primary">Conoce el plan</Button>
+              <Button variant="secondary">Ver más</Button>
+              <Button variant="ghost">Detalles →</Button>
+              <Button variant="dark">Validar</Button>
+              <Button variant="primary" size="sm">Pequeño</Button>
+              <Button variant="primary" disabled>Deshabilitado</Button>
+            </div>
+          </div>
+
+          <div className="grp">
+            <div className="lbl">Badge</div>
+            <div className="row">
+              <Badge variant="accent">Eje 1</Badge>
+              <Badge variant="primary">Gestión hídrica</Badge>
+              <Badge variant="success">Activo</Badge>
+              <Badge variant="outline">En revisión</Badge>
+              <Badge variant="subtle">2026</Badge>
+            </div>
+          </div>
+
+          <div className="grp">
+            <div className="lbl">StatDisplay</div>
+            <div className="row" style={{ alignItems: 'flex-start', gap: 32 }}>
+              <StatDisplay value="948.190" label="beneficiarios" sublabel="beneficiaries" color="primary" size="sm" />
+              <StatDisplay value="+110M USD" label="inversión pública" color="accent" size="sm" />
+              <StatDisplay value="14x" label="aporte privado" color="dark" size="sm" />
+            </div>
+          </div>
+
+          <div className="grp">
+            <div className="lbl">EjeCard</div>
+            <div className="g3">
+              <EjeCard number={1} title="Gestión hídrica eficiente" onAction={() => {}} />
+              <EjeCard number={2} title="Salud humana adaptada" onAction={() => {}} />
+              <EjeCard number={3} title="Sistemas productivos resilientes" onAction={() => {}} />
+            </div>
+          </div>
+
+          <div className="grp">
+            <div className="lbl">DataTable</div>
+            <DataTable
+              headers={['Indicador', 'Comunas mejor ICVU', 'Zonas de rezago']}
+              rows={[
+                ['Puntaje PSU > 450',      '96,20%', '82,90%'],
+                ['Pobreza CASEN',          '1%',     '13,80%'],
+                ['Ingresos municipales per cápita', '$679.240', '$93.070'],
+              ]}
+              footnote="SINIM; 2024 — Índice de Calidad de Vida Urbana UC - CChC"
+            />
+          </div>
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+  </script>
+</body>
+</html>

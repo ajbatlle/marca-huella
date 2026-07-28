@@ -1,0 +1,58 @@
+<!-- @dsCard group="Brand" viewport="700x440" name="Ilustraciones" subtitle="Dos tipos: Chile panorama (slides/brand) · line art ciudad (documentos)" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    body { margin: 0; padding: 18px 20px; background: var(--color-surface); font-family: var(--font-primary); }
+    .section-title { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-text-muted); margin: 0 0 8px; }
+    .illus-wrap { border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--color-border); margin-bottom: 10px; }
+    .illus-wrap img { width: 100%; display: block; max-height: 120px; object-fit: cover; object-position: center; }
+    .type-label { font-size: 11px; font-weight: 700; color: var(--color-text); margin-bottom: 3px; }
+    .type-desc { font-size: 10px; color: var(--color-text-muted); line-height: 1.55; margin-bottom: 10px; }
+    .tag { display: inline-block; background: var(--color-surface-raised); border: 1px solid var(--color-border); border-radius: var(--radius-full); font-size: 9px; font-weight: 700; color: var(--color-text-muted); padding: 2px 8px; margin: 0 3px 4px 0; }
+    .tag.accent { background: rgba(226,135,87,0.1); border-color: var(--color-accent); color: var(--color-accent); }
+    .tag.primary { background: rgba(122,128,163,0.1); border-color: var(--color-primary); color: var(--color-primary); }
+    .row { display: flex; gap: 14px; }
+    .col { flex: 1; }
+    .rule { font-size: 9px; color: var(--color-text-muted); padding: 8px 10px; background: var(--color-surface-muted); border-radius: var(--radius-sm); line-height: 1.6; }
+    .rule strong { color: var(--color-accent); }
+  </style>
+</head>
+<body>
+  <div class="row">
+    <div class="col">
+      <div class="section-title">Tipo 1 — Chile Panorama</div>
+      <div class="illus-wrap">
+        <img src="../assets/illustrations/chile-panorama.png" alt="Chile panorama">
+      </div>
+      <div class="type-label">Ilustración panorámica de Chile</div>
+      <div class="type-desc">Colorida, abarca toda la geografía chilena de norte a sur. Elemento de marca nacional y diversidad territorial.</div>
+      <div>
+        <span class="tag primary">Slides de cierre</span>
+        <span class="tag primary">Presentaciones PPT</span>
+        <span class="tag primary">Brand general</span>
+      </div>
+    </div>
+    <div class="col">
+      <div class="section-title">Tipo 2 — Line Art Ciudad</div>
+      <div class="illus-wrap">
+        <img src="../assets/illustrations/vallenar.png" alt="Line art Vallenar">
+      </div>
+      <div class="type-label">Ilustración pen-and-ink comunal</div>
+      <div class="type-desc">Azul grisáceo, trazo fino. Panorámica específica de la ciudad del convenio. Se encarga una por municipio.</div>
+      <div>
+        <span class="tag accent">Invitaciones</span>
+        <span class="tag accent">Cartas formales</span>
+        <span class="tag accent">Convenios</span>
+        <span class="tag accent">Documentos comunales</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="rule" style="margin-top:12px;">
+    <strong>Regla clave:</strong> Nunca mezclar los dos tipos en un mismo documento. &nbsp;·&nbsp; Siempre a sangre en el borde inferior. &nbsp;·&nbsp; Nunca recortar parcialmente. &nbsp;·&nbsp; Nunca usar como fondo con texto encima. &nbsp;·&nbsp; Archivos: <code style="font-size:9px;">assets/illustrations/chile-panorama.png</code> y <code style="font-size:9px;">assets/illustrations/vallenar.png</code>
+  </div>
+</body>
+</html>

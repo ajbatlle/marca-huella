@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Deck de Presentación" description="Deck institucional: portada, sección, contenido, stats, ficha de proyecto, agenda y contraportada" -->
+<helmet>
+  <script src="./ds-base.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #111; margin: 0; }
+  </style>
+</helmet>
+
+<x-import component-from-global-scope="deck-stage" from="./deck-stage.js" width="1280" height="720" hint-size="100%,100%">
+
+  <!-- ── 01 PORTADA ──────────────────────────────────────── -->
+  <section data-screen-label="01 — Portada" style="background:linear-gradient(160deg,#7A80A3 0%,#6B7195 60%,#5E6583 100%);display:flex;flex-direction:column;font-family:var(--font-primary,sans-serif);position:relative;">
+    <img src="../../assets/brand/fecu-social.png" alt="Sello FECU Social" style="position:absolute;top:32px;left:44px;width:88px;height:88px;opacity:0.9;">
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;padding:0 80px 16px;">
+      <img src="../../assets/brand/logo-blanco-v2.svg" alt="huellalocal®" style="width:380px;height:auto;display:block;">
+      <p style="color:rgba(255,255,255,0.75);font-size:24px;font-weight:400;line-height:1.45;text-align:center;letter-spacing:0.01em;">Por el desarrollo equitativo<br>de los territorios</p>
+    </div>
+    <div style="display:flex;height:12px;flex:none;">
+      <div style="flex:1;background:#8DC899;"></div>
+      <div style="flex:1;background:#FECC52;"></div>
+      <div style="flex:1;background:#7A80A3;"></div>
+    </div>
+  </section>
+
+  <!-- ── 02 SECCIÓN DIVISORA ─────────────────────────────── -->
+  <section data-screen-label="02 — Sección" style="background:white;display:flex;flex-direction:column;font-family:var(--font-primary,sans-serif);">
+    <div style="height:8px;background:#7A80A3;flex:none;"></div>
+    <div style="flex:1;display:flex;align-items:center;padding:60px 100px;gap:80px;">
+      <div style="flex:1;display:flex;flex-direction:column;">
+        <div style="font-size:120px;font-weight:700;color:rgba(122,128,163,0.1);line-height:1;margin-bottom:-24px;">01</div>
+        <div style="font-size:64px;font-weight:700;color:#7A80A3;line-height:1.1;margin-bottom:28px;">Título de sección</div>
+        <div style="width:64px;height:4px;background:#E28757;border-radius:2px;"></div>
+      </div>
+      <div style="flex:0 0 480px;height:380px;border-radius:12px;background:#f4f5f7;border:2px dashed #d0d2db;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="4" y="8" width="40" height="32" rx="4" stroke="#8A8C9A" stroke-width="2.5" fill="none"/><circle cx="17" cy="20" r="4" stroke="#8A8C9A" stroke-width="2.5" fill="none"/><path d="M4 34l10-10 8 8 6-6 16 14" stroke="#8A8C9A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <span style="font-size:13px;font-weight:500;color:#8A8C9A;letter-spacing:0.02em;">Imagen</span>
+      </div>
+    </div>
+    <div style="height:8px;background:#E28757;flex:none;"></div>
+  </section>
+
+  <!-- ── 03 CONTENIDO ───────────────────────────────────── -->
+  <section data-screen-label="03 — Contenido" style="background:white;display:flex;flex-direction:column;font-family:var(--font-primary,sans-serif);">
+    <div style="height:8px;background:#7A80A3;flex:none;"></div>
+    <div style="flex:1;display:flex;padding:52px 72px;gap:64px;align-items:center;">
+      <div style="flex:1;display:flex;flex-direction:column;">
+        <h2 style="font-size:52px;font-weight:700;color:#7A80A3;line-height:1.08;margin-bottom:28px;">Título de la<br>diapositiva aquí</h2>
+        <div style="width:48px;height:3px;background:#E28757;border-radius:2px;margin-bottom:22px;"></div>
+        <p style="font-size:17px;line-height:1.65;color:#4D4E56;max-width:520px;">La <strong style="font-weight:700;color:#7A80A3;">colaboración público-privada</strong> fortalece a las comunidades, municipios y gobiernos regionales, mejorando sinergias y canales de participación ciudadana.</p>
+      </div>
+      <div style="flex:0 0 440px;height:500px;border-radius:12px;background:#f4f5f7;border:2px dashed #d0d2db;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="4" y="8" width="40" height="32" rx="4" stroke="#8A8C9A" stroke-width="2.5" fill="none"/><circle cx="17" cy="20" r="4" stroke="#8A8C9A" stroke-width="2.5" fill="none"/><path d="M4 34l10-10 8 8 6-6 16 14" stroke="#8A8C9A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <span style="font-size:13px;font-weight:500;color:#8A8C9A;letter-spacing:0.02em;">Imagen</span>
+      </div>
+    </div>
+    <div style="height:8px;background:#7A80A3;flex:none;"></div>
+  </section>
+
+  <!-- ── 04 STATS — 4 CIFRAS ────────────────────────────── -->
+  <section data-screen-label="04 — Stats Cifras" style="background:white;display:flex;flex-direction:column;font-family:var(--font-primary,sans-serif);">
+    <div style="flex:1;display:flex;flex-direction:column;padding:44px 72px 32px;">
+      <div style="font-size:38px;font-weight:700;color:#4D4E56;line-height:1.1;margin-bottom:20px;">Huella Local en cifras<br>estos 10 años de trabajo</div>
+      <div style="width:48px;height:3px;background:#E28757;border-radius:2px;margin-bottom:40px;flex:none;"></div>
+      <div style="flex:1;display:flex;flex-direction:column;gap:32px;justify-content:center;">
+        <div style="display:flex;align-items:flex-start;gap:64px;">
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <div style="font-size:56px;font-weight:700;color:#7A80A3;line-height:1;">+1.000.000</div>
+            <div style="font-size:18px;color:#4D4E56;">beneficiarios</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <div style="font-size:56px;font-weight:700;color:#7A80A3;line-height:1;">25x</div>
+            <div style="font-size:18px;color:#4D4E56;">veces aporte privado</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <div style="font-size:56px;font-weight:700;color:#7A80A3;line-height:1;">288</div>
+            <div style="font-size:18px;color:#4D4E56;">iniciativas de inversión pública</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:64px;">
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <div style="font-size:56px;font-weight:700;color:#E28757;line-height:1;">148MM USD</div>
+            <div style="font-size:18px;color:#4D4E56;">inversión pública comprometida</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <div style="font-size:56px;font-weight:700;color:#7A80A3;line-height:1;">5,8MM USD</div>
+            <div style="font-size:18px;color:#4D4E56;">aportes para cartera de inversión</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="flex:none;line-height:0;">
+      <img src="../../assets/brand/franja-verde.png" alt="Franja Verde — Huella Local" style="width:100%;display:block;">
+    </div>
+  </section>
+
+  <!-- ── 05 STATS — TABLA COMPARATIVA ─────────────────────── -->
+  <section data-screen-label="05 — Stats Tabla" style="background:white;display:flex;flex-direction:column;font-family:var(--font-primary,sans-serif);">
+    <div style="flex:1;padding:44px 72px 28px;display:flex;flex-direction:column;gap:28px;">
+      <div style="font-size:38px;font-weight:700;color:#4D4E56;line-height:1.1;">¿Qué vemos desde Huella Local?</div>
+      <table style="width:100%;border-collapse:collapse;">
+        <thead>
+          <tr>
+            <th style="background:#7A80A3;color:white;font-weight:700;font-size:17px;padding:14px 20px;text-align:left;">Indicador</th>
+            <th style="background:#7A80A3;color:white;font-weight:700;font-size:17px;padding:14px 20px;text-align:center;border-left:1px solid rgba(255,255,255,0.25);">Comunas mejor ICVU</th>
+            <th style="background:#7A80A3;color:white;font-weight:700;font-size:17px;padding:14px 20px;text-align:center;border-left:1px solid rgba(255,255,255,0.25);">Zonas de rezago Ñuble</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding:14px 20px;font-size:15px;color:#4D4E56;border-bottom:1px solid #e8e9ef;width:320px;">Porcentaje puntaje PSU mayor a 450</td>
+            <td style="padding:14px 20px;font-size:26px;font-weight:700;color:#7A80A3;text-align:center;border-bottom:1px solid #e8e9ef;border-left:1px solid #e8e9ef;">96,20%</td>
+            <td style="padding:14px 20px;font-size:26px;font-weight:700;color:#7A80A3;text-align:center;border-bottom:1px solid #e8e9ef;border-left:1px solid #e8e9ef;">82,90%</td>
+          </tr>
+          <tr>
+            <td style="padding:14px 20px;font-size:15px;color:#4D4E56;border-bottom:1px solid #e8e9ef;background:#f8f9fb;">Pobreza comunal por ingresos CASEN</td>
+            <td style="padding:14px 20px;font-size:26px;font-weight:700;color:#7A80A3;text-align:center;border-bottom:1px solid #e8e9ef;border-left:1px solid #e8e9ef;background:#f8f9fb;">1%</td>
+            <td style="padding:14px 20px;font-size:26px;font-weight:700;color:#7A80A3;text-align:center;border-bottom:1px solid #e8e9ef;border-left:1px solid #e8e9ef;background:#f8f9fb;">13,80%</td>
+          </tr>
+          <tr>
+            <td style="padding:14px 20px;font-size:15px;color:#4D4E56;border-bottom:1px solid #e8e9ef;">N° funcionarios planta y contrata</td>
+            <td style="padding:14px 20px;font-size:26px;font-weight:700;color:#7A80A3;text-align:center;border-bottom:1px solid #e8e9ef;border-left:1px solid #e8e9ef;">876</td>
+            <td style="padding:14px 20px;font-size:26px;font-weight:700;color:#7A80A3;text-align:center;border-bottom:1px solid #e8e9ef;border-left:1px solid #e8e9ef;">64</td>
+          </tr>
+          <tr>
+            <td style="padding:14px 20px;font-size:15px;color:#4D4E56;background:#f8f9fb;">Ingresos municipales propios per cápita</td>
+            <td style="padding:14px 20px;font-size:26px;font-weight:700;color:#7A80A3;text-align:center;border-left:1px solid #e8e9ef;background:#f8f9fb;">$679.240</td>
+            <td style="padding:14px 20px;font-size:26px;font-weight:700;color:#7A80A3;text-align:center;border-left:1px solid #e8e9ef;background:#f8f9fb;">$93.070</td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="font-size:12px;font-weight:700;color:#9a9ba8;">SINIM; 2024 · Índice de Calidad de Vida Urbana UC - CChC</div>
+    </div>
+    <div style="flex:none;line-height:0;">
+      <img src="../../assets/brand/franja-verde.png" alt="Franja Verde — Huella Local" style="width:100%;display:block;">
+    </div>
+  </section>
+
+  <!-- ── 06 FICHA DE PROYECTO ───────────────────────────── -->
+  <section data-screen-label="06 — Ficha de Proyecto" style="background:white;display:flex;flex-direction:column;font-family:var(--font-primary,sans-serif);">
+    <div style="flex:none;padding:18px 48px;border-bottom:2px solid #e8e9ef;display:flex;align-items:center;justify-content:space-between;gap:24px;">
+      <div style="font-size:28px;font-weight:700;color:#4D4E56;line-height:1.15;">1. Mejoramiento Plaza de Armas | Mejillones</div>
+      <div style="display:flex;gap:5px;flex:none;">
+        <div style="width:42px;height:42px;border-radius:4px;background:#FD9D24;display:flex;flex-direction:column;align-items:center;justify-content:center;color:white;gap:1px;">
+          <span style="font-size:13px;font-weight:700;">11</span>
+          <span style="font-size:5px;font-weight:700;text-align:center;text-transform:uppercase;max-width:34px;line-height:1.2;">Ciudades sostenibles</span>
+        </div>
+        <div style="width:42px;height:42px;border-radius:4px;background:#1E4167;display:flex;flex-direction:column;align-items:center;justify-content:center;color:white;gap:1px;">
+          <span style="font-size:13px;font-weight:700;">17</span>
+          <span style="font-size:5px;font-weight:700;text-align:center;text-transform:uppercase;max-width:34px;line-height:1.2;">Alianzas p/ objetivos</span>
+        </div>
+      </div>
+    </div>
+    <div style="flex:1;display:flex;min-height:0;">
+      <div style="flex:0 0 600px;padding:22px 40px 18px 48px;display:flex;flex-direction:column;border-right:1px solid #e8e9ef;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:18px;">
+          <span style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#9a9ba8;">Estado</span>
+          <span style="background:#E28757;color:white;font-size:13px;font-weight:700;padding:4px 14px;border-radius:99px;">Expediente final entregado al municipio</span>
+        </div>
+        <div style="display:flex;flex-direction:column;">
+          <div style="display:flex;align-items:center;padding:9px 0;border-top:1px solid #f0f1f5;">
+            <span style="flex:0 0 220px;font-size:24px;font-weight:700;color:#7A80A3;line-height:1;white-space:nowrap;">$1.507.917.359</span>
+            <span style="font-size:15px;color:#9a9ba8;">monto de ejecución</span>
+          </div>
+          <div style="display:flex;align-items:center;padding:9px 0;border-top:1px solid #f0f1f5;">
+            <span style="flex:0 0 220px;font-size:24px;font-weight:700;color:#7A80A3;line-height:1;white-space:nowrap;">13.467</span>
+            <span style="font-size:15px;color:#9a9ba8;">beneficiarios — <strong style="font-weight:700;color:#4D4E56;">población total</strong></span>
+          </div>
+          <div style="display:flex;align-items:center;padding:9px 0;border-top:1px solid #f0f1f5;">
+            <span style="flex:0 0 220px;font-size:24px;font-weight:700;color:#7A80A3;line-height:1;white-space:nowrap;">$57.842.897</span>
+            <span style="font-size:15px;color:#9a9ba8;">costo de diseño</span>
+          </div>
+          <div style="display:flex;align-items:center;padding:9px 0;border-top:1px solid #f0f1f5;">
+            <span style="flex:0 0 220px;font-size:24px;font-weight:700;color:#7A80A3;line-height:1;white-space:nowrap;">2° sem. 2026</span>
+            <span style="font-size:15px;color:#9a9ba8;">inicio estimado de obras</span>
+          </div>
+          <div style="display:flex;align-items:center;padding:9px 0;border-top:1px solid #f0f1f5;">
+            <span style="flex:0 0 220px;font-size:24px;font-weight:700;color:#7A80A3;line-height:1;white-space:nowrap;">584</span>
+            <span style="font-size:15px;color:#9a9ba8;">vecinos en participaciones</span>
+          </div>
+          <div style="display:flex;align-items:center;padding:9px 0;border-top:1px solid #f0f1f5;">
+            <span style="flex:0 0 220px;font-size:24px;font-weight:700;color:#7A80A3;line-height:1;white-space:nowrap;">3.459 m²</span>
+            <span style="font-size:15px;color:#9a9ba8;">superficie a intervenir</span>
+          </div>
+        </div>
+      </div>
+      <div style="flex:1;padding:22px 48px 18px 28px;display:flex;flex-direction:column;gap:14px;">
+        <div style="flex:1;border-radius:10px;background:#f4f5f7;border:2px dashed #d0d2db;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="2" y="7" width="36" height="26" rx="4" stroke="#B0B2BF" stroke-width="2.5" fill="none"/><circle cx="14" cy="17" r="4" stroke="#B0B2BF" stroke-width="2.5" fill="none"/><path d="M2 30l10-10 8 8 7-7 13 12" stroke="#B0B2BF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          <span style="font-size:13px;color:#9a9ba8;font-weight:500;">Foto del proyecto</span>
+        </div>
+        <div style="background:#f8f9fb;border-radius:8px;padding:14px 18px;flex:none;">
+          <div style="font-size:15px;font-weight:700;color:#4D4E56;margin-bottom:8px;">Próximos pasos</div>
+          <div style="font-size:13px;color:#9a9ba8;line-height:1.6;">— Aprobación Gastos de Operación y Mantenimiento, Concejo Municipal (abril 2025)</div>
+          <div style="font-size:13px;color:#9a9ba8;line-height:1.6;">— Formulación proyecto MIDESO y obtención RS (abril 2025)</div>
+          <div style="font-size:13px;color:#9a9ba8;line-height:1.6;">— Postulación a FNDR (mayo 2025)</div>
+        </div>
+      </div>
+    </div>
+    <div style="flex:none;line-height:0;">
+      <img src="../../assets/brand/franja-verde.png" alt="Franja Verde — Huella Local" style="width:100%;display:block;">
+    </div>
+  </section>
+
+  <!-- ── 07 AGENDA DE EVENTO ────────────────────────────── -->
+  <section data-screen-label="07 — Agenda de Evento" style="background:white;display:flex;flex-direction:column;font-family:var(--font-primary,sans-serif);">
+    <div style="flex:none;padding:24px 52px 16px;display:flex;align-items:flex-start;justify-content:space-between;border-bottom:1px solid #e8e9ef;">
+      <div style="display:flex;flex-direction:column;gap:4px;">
+        <div style="font-size:30px;font-weight:700;color:#4D4E56;line-height:1.1;">Programa del encuentro</div>
+        <div style="font-size:18px;font-weight:400;color:#9a9ba8;">Sesión de avances · Miércoles 9 de abril de 2025</div>
+      </div>
+      <div style="height:54px;width:200px;border-radius:6px;background:#f4f5f7;border:1.5px dashed #d0d2db;display:flex;align-items:center;justify-content:center;">
+        <span style="font-size:11px;font-weight:600;color:#9a9ba8;">Logo del evento</span>
+      </div>
+    </div>
+    <div style="flex:1;display:flex;min-height:0;">
+      <div style="flex:0 0 740px;padding:16px 40px 16px 52px;display:flex;flex-direction:column;border-right:1px solid #e8e9ef;">
+        <div style="display:flex;flex-direction:column;">
+          <div style="padding:9px 0;border-bottom:1px solid #f0f1f5;display:flex;align-items:baseline;">
+            <span style="font-size:22px;font-weight:700;color:#7A80A3;width:64px;flex:none;">11:00</span>
+            <span style="font-size:20px;font-weight:700;color:#E28757;margin:0 12px;">|</span>
+            <span style="font-size:18px;color:#4D4E56;">Recepción de invitados</span>
+          </div>
+          <div style="padding:9px 0;border-bottom:1px solid #f0f1f5;">
+            <div style="display:flex;align-items:baseline;">
+              <span style="font-size:22px;font-weight:700;color:#7A80A3;width:64px;flex:none;">11:05</span>
+              <span style="font-size:20px;font-weight:700;color:#E28757;margin:0 12px;">|</span>
+              <span style="font-size:18px;color:#4D4E56;">Bienvenida</span>
+            </div>
+            <div style="font-size:14px;font-style:italic;color:#E28757;margin-top:2px;padding-left:88px;">Marcelino Carvajal, alcalde de la comuna de Mejillones</div>
+          </div>
+          <div style="padding:9px 0;border-bottom:1px solid #f0f1f5;">
+            <div style="display:flex;align-items:baseline;">
+              <span style="font-size:22px;font-weight:700;color:#7A80A3;width:64px;flex:none;">11:30</span>
+              <span style="font-size:20px;font-weight:700;color:#E28757;margin:0 12px;">|</span>
+              <span style="font-size:18px;color:#4D4E56;">Fundación Huella Local</span>
+            </div>
+            <div style="font-size:14px;font-style:italic;color:#E28757;margin-top:2px;padding-left:88px;">Gonzalo Vial, director ejecutivo Huella Local</div>
+          </div>
+          <div style="padding:9px 0;border-bottom:1px solid #f0f1f5;">
+            <div style="display:flex;align-items:baseline;">
+              <span style="font-size:22px;font-weight:700;color:#7A80A3;width:64px;flex:none;">11:45</span>
+              <span style="font-size:20px;font-weight:700;color:#E28757;margin:0 12px;">|</span>
+              <span style="font-size:18px;color:#4D4E56;">Avances Cartera de proyectos</span>
+            </div>
+            <div style="font-size:14px;font-style:italic;color:#E28757;margin-top:2px;padding-left:88px;">Jorge Troncoso, director zona norte Huella Local</div>
+          </div>
+          <div style="padding:9px 0;border-bottom:1px solid #f0f1f5;display:flex;align-items:baseline;">
+            <span style="font-size:22px;font-weight:700;color:#7A80A3;width:64px;flex:none;">12:20</span>
+            <span style="font-size:20px;font-weight:700;color:#E28757;margin:0 12px;">|</span>
+            <span style="font-size:18px;color:#4D4E56;">Próximos pasos</span>
+          </div>
+          <div style="padding:9px 0;border-bottom:1px solid #f0f1f5;display:flex;align-items:baseline;">
+            <span style="font-size:22px;font-weight:700;color:#7A80A3;width:64px;flex:none;">13:00</span>
+            <span style="font-size:20px;font-weight:700;color:#E28757;margin:0 12px;">|</span>
+            <span style="font-size:18px;color:#4D4E56;">Foto oficial y Café</span>
+          </div>
+        </div>
+      </div>
+      <div style="flex:1;padding:16px 44px 16px 28px;">
+        <div style="width:100%;height:100%;border-radius:10px;background:#f4f5f7;border:2px dashed #d0d2db;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="2" y="7" width="36" height="26" rx="4" stroke="#B0B2BF" stroke-width="2.5" fill="none"/><circle cx="14" cy="17" r="4" stroke="#B0B2BF" stroke-width="2.5" fill="none"/><path d="M2 30l10-10 8 8 7-7 13 12" stroke="#B0B2BF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          <span style="font-size:13px;font-weight:500;color:#9a9ba8;">Foto de la ciudad o el evento</span>
+        </div>
+      </div>
+    </div>
+    <div style="flex:none;height:60px;background:#f8f9fb;border-top:1px solid #e8e9ef;padding:0 52px;display:flex;flex-wrap:wrap;align-items:center;align-content:center;gap:10px;justify-content:flex-start;">
+      <div style="height:30px;min-width:56px;max-width:120px;background:#e4e5ea;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#7a7b87;padding:0 10px;">Municipio</div>
+      <div style="height:30px;min-width:56px;max-width:120px;background:#e4e5ea;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#7a7b87;padding:0 10px;">FECU</div>
+      <div style="height:30px;min-width:56px;max-width:120px;background:#e4e5ea;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#7a7b87;padding:0 10px;">Partner</div>
+      <div style="height:30px;min-width:56px;max-width:120px;background:#e4e5ea;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#7a7b87;padding:0 10px;">Partner</div>
+      <img src="../../assets/brand/logo-color-v2.svg" alt="huellalocal®" style="height:24px;width:auto;margin-left:auto;">
+    </div>
+    <div style="height:8px;background:#E28757;flex:none;"></div>
+  </section>
+
+  <!-- ── 08 CONTRAPORTADA ───────────────────────────────── -->
+  <section data-screen-label="08 — Contraportada" style="background:linear-gradient(160deg,#8DC899 0%,#7BA884 50%,#78AA6D 100%);display:flex;flex-direction:column;font-family:var(--font-primary,sans-serif);">
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:36px;">
+      <img src="../../assets/brand/logo-blanco-v2.svg" alt="huellalocal®" style="width:360px;height:auto;display:block;">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+        <div style="display:flex;gap:14px;align-items:center;">
+          <div style="width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,0.25);display:flex;align-items:center;justify-content:center;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="white" stroke-width="2" fill="none"/><circle cx="12" cy="12" r="5" stroke="white" stroke-width="2" fill="none"/><circle cx="17.5" cy="6.5" r="1.5" fill="white"/></svg>
+          </div>
+          <div style="width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,0.25);display:flex;align-items:center;justify-content:center;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </div>
+          <div style="width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,0.25);display:flex;align-items:center;justify-content:center;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </div>
+          <div style="width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,0.25);display:flex;align-items:center;justify-content:center;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </div>
+        </div>
+        <div style="color:rgba(255,255,255,0.9);font-size:22px;font-weight:400;letter-spacing:0.01em;">www.huellalocal.cl</div>
+      </div>
+    </div>
+    <div style="display:flex;height:12px;flex:none;">
+      <div style="flex:1;background:#4D4E56;"></div>
+      <div style="flex:1;background:#FECC52;"></div>
+      <div style="flex:1;background:#8DC899;opacity:0.6;"></div>
+    </div>
+  </section>
+
+</x-import>
+
+</x-dc>
+</body>
+</html>

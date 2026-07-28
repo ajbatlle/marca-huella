@@ -1,0 +1,102 @@
+<!-- @dsCard group="Slides" viewport="1280x720" name="Stat Big — cifra + declaración" subtitle="Fondo azul · stat XL · statement · franja verde" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 1280px; height: 720px; overflow: hidden;
+      font-family: var(--font-primary);
+      background: #ffffff;
+    }
+    .slide {
+      width: 1280px; height: 720px;
+      display: flex; flex-direction: column;
+      background: #ffffff;
+    }
+
+    /* Top bar */
+    .top {
+      flex: none;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: var(--slide-margin-y) var(--slide-margin-x) 0;
+    }
+    .logo { height: 28px; }
+    .slide-num {
+      font-size: 13px; font-weight: 600; letter-spacing: 0.08em;
+      color: #999999;
+      margin-left: auto;
+    }
+
+    /* Body */
+    .body {
+      flex: 1; display: flex; flex-direction: column;
+      padding: var(--space-3) var(--slide-margin-x) 0;
+    }
+
+    /* Statement */
+    .statement {
+      font-size: 36px; font-weight: 700; line-height: 1.28;
+      color: var(--hl-azul-500);
+      max-width: 860px;
+      flex: 1;
+    }
+
+    /* Bottom stat row */
+    .stat-row {
+      flex: none;
+      display: flex; align-items: flex-end; gap: var(--space-8);
+      padding-bottom: var(--slide-margin-y);
+    }
+    .stat-number {
+      font-size: 200px; font-weight: 700; line-height: 0.85;
+      color: var(--hl-naranja-500); letter-spacing: -0.04em;
+    }
+    .stat-meta {
+      display: flex; flex-direction: column; gap: 10px;
+      padding-bottom: 12px;
+    }
+    .arrow-icon {
+      font-size: 44px;
+      color: var(--hl-naranja-500);
+    }
+    .stat-desc {
+      font-size: 15px; font-weight: 400; line-height: 1.5;
+      color: var(--hl-gris-texto);
+      max-width: 480px;
+    }
+
+    /* Footer */
+    .franja { flex: none; line-height: 0; }
+    .franja img { width: 100%; display: block; }
+  </style>
+</head>
+<body>
+  <div class="slide">
+
+    <div class="top">
+    </div>
+
+    <div class="body">
+      <p class="statement">
+        La falta de capacidad técnica es el principal obstáculo que separa a las comunidades vulnerables de la inversión que merecen — no la falta de voluntad.
+      </p>
+      <div class="stat-row">
+        <div class="stat-number">71<span style="font-size:100px;">%</span></div>
+        <div class="stat-meta">
+          <span class="material-icons arrow-icon">north_east</span>
+          <p class="stat-desc">de los municipios con menor índice de desarrollo no logra formular proyectos de inversión pública sin asistencia técnica especializada</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="franja">
+      <img src="../assets/brand/franja-verde.png" alt="Franja Verde — Huella Local">
+    </div>
+
+  </div>
+</body>
+</html>

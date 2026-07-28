@@ -1,0 +1,27 @@
+/* ─────────────────────────────────────────
+   Huella Local — Effects & Motion Tokens
+   ──────────────────────────────────────── */
+
+:root {
+  /* ── Transitions ──────────────────────────────────────────── */
+  --transition-fast:   0.15s ease;  /* @kind other */
+  --transition-base:   0.25s ease;  /* @kind other */
+  --transition-slow:   0.4s ease;   /* @kind other */
+
+  /* ── Blur ─────────────────────────────────────────────────── */
+  --blur-sm: blur(6px);   /* @kind other */
+  --blur-md: blur(10px);  /* @kind other */
+  --blur-lg: blur(20px);  /* @kind other */
+
+  /* ── Glass morphism ───────────────────────────────────────── */
+  /* Used in hero info panels over photo backgrounds */
+  --glass-bg:        rgba(255, 255, 255, 0.15);
+  --glass-border:    rgba(255, 255, 255, 0.20);
+  --glass-bg-dark:   rgba(0, 0, 0, 0.30);
+
+  /* ── Photo overlays ───────────────────────────────────────── */
+  /* Azul-tinted overlay for B&W photography (slides, hero) */
+  --overlay-photo:   rgba(90, 95, 130, 0.60);
+  --overlay-dark:    rgba(0, 0, 0, 0.55);
+  --overlay-light:   rgba(255, 255, 255, 0.85);
+}

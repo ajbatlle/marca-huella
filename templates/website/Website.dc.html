@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Sitio Web Institucional" description="Landing institucional de una página: nav, hero, impacto, modelo, líneas de trabajo, proyectos, aliados, CTA y footer" -->
+<helmet>
+  <script src="./ds-base.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: #ffffff; font-family: 'Montserrat', sans-serif; }
+    a { text-decoration: none; color: inherit; }
+  </style>
+</helmet>
+
+<div style="font-family:var(--font-primary,'Montserrat',sans-serif);color:#4D4E56;">
+
+  <!-- ── NAV ─────────────────────────────────────────────── -->
+  <header style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(122,128,163,0.18);">
+    <nav style="max-width:1180px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;gap:32px;">
+      <a href="#inicio" style="flex:none;display:flex;align-items:center;">
+        <img src="../../assets/brand/logo-color-v2.svg" alt="Huella Local" style="height:34px;width:auto;display:block;">
+      </a>
+      <div style="flex:1;display:flex;align-items:center;justify-content:center;gap:30px;">
+        <a href="#modelo" style="font-size:14px;font-weight:700;color:#4D4E56;letter-spacing:0.01em;">El modelo</a>
+        <a href="#trabajo" style="font-size:14px;font-weight:700;color:#4D4E56;letter-spacing:0.01em;">Cómo trabajamos</a>
+        <a href="#proyectos" style="font-size:14px;font-weight:700;color:#4D4E56;letter-spacing:0.01em;">Proyectos</a>
+        <a href="#aliados" style="font-size:14px;font-weight:700;color:#4D4E56;letter-spacing:0.01em;">Aliados</a>
+      </div>
+      <div style="flex:none;">
+        <x-import component-from-global-scope="HuellaLocalDesignSystem_59d6d2.Button" variant="primary" size="sm" href="#sumar" hint-size="150px,40px">Suma tu empresa</x-import>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ── HERO ────────────────────────────────────────────── -->
+  <section id="inicio" style="position:relative;overflow:hidden;background:#5E6583;">
+    <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(135deg,#6B7195 0px,#6B7195 22px,#646a8c 22px,#646a8c 44px);"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(120deg,rgba(90,95,130,0.92) 0%,rgba(90,95,130,0.72) 55%,rgba(90,95,130,0.5) 100%);"></div>
+    <div style="position:absolute;left:50%;bottom:18px;transform:translateX(-50%);font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;letter-spacing:0.05em;color:rgba(255,255,255,0.55);">[ documentary photo — community infrastructure ]</div>
+    <div style="position:relative;max-width:1180px;margin:0 auto;padding:104px 24px 120px;">
+      <div style="max-width:640px;background:rgba(255,255,255,0.14);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.28);border-radius:16px;padding:44px 44px 48px;">
+        <h1 style="margin-top: 0; font-size: 54px; font-weight: 600; line-height: 1.06; color: #ffffff; letter-spacing: -0.01em">Cerramos la brecha entre territorios</h1>
+        <sc-if value="{{ bilingual }}" hint-placeholder-val="{{ false }}">
+          <p style="margin-top:10px;font-size:20px;font-style:italic;font-weight:400;color:#FBC9A9;line-height:1.3;">Closing the gap between Chile's territories</p>
+        </sc-if>
+        <p style="margin-top:22px;font-size:18px;line-height:1.6;color:rgba(255,255,255,0.92);max-width:540px;">Conectamos al sector privado con los municipios para desbloquear <strong style="font-weight:700;color:#ffffff;">financiamiento público</strong> y ejecutar obras de infraestructura de alto impacto social.</p>
+        <div style="margin-top:32px;display:flex;flex-wrap:wrap;gap:14px;">
+          <x-import component-from-global-scope="HuellaLocalDesignSystem_59d6d2.Button" variant="primary" size="lg" href="#modelo" hint-size="180px,52px">Conoce el modelo</x-import>
+          <x-import component-from-global-scope="HuellaLocalDesignSystem_59d6d2.Button" variant="secondary" size="lg" href="#proyectos" hint-size="160px,52px">Ver proyectos</x-import>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── IMPACTO ─────────────────────────────────────────── -->
+  <sc-if value="{{ showImpact }}" hint-placeholder-val="{{ true }}">
+  <section style="background:#F7F8F9;border-bottom:1px solid rgba(122,128,163,0.18);">
+    <div style="max-width:1180px;margin:0 auto;padding:60px 24px;">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:40px;">
+        <div>
+          <div style="font-size:13px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#E28757;">Nuestro impacto</div>
+          <h2 style="margin-top:8px;font-size:34px;font-weight:700;color:#7A80A3;line-height:1.12;">10 años movilizando<br>inversión para Chile</h2>
+        </div>
+        <p style="font-size:14px;color:#8A8C9A;max-width:300px;line-height:1.6;">Cifras acumuladas de la cartera de iniciativas de infraestructura y equipamiento municipal.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;">
+        <x-import component-from-global-scope="HuellaLocalDesignSystem_59d6d2.StatDisplay" value="948.190" label="beneficiarios" color="primary" size="lg" align="left" hint-size="200px,110px"></x-import>
+        <x-import component-from-global-scope="HuellaLocalDesignSystem_59d6d2.StatDisplay" value="276" label="iniciativas de inversión" color="primary" size="lg" align="left" hint-size="200px,110px"></x-import>
+        <x-import component-from-global-scope="HuellaLocalDesignSystem_59d6d2.StatDisplay" value="+110M USD" label="inversión pública desbloqueada" color="accent" size="lg" align="left" hint-size="200px,110px"></x-import>
+        <x-import component-from-global-scope="HuellaLocalDesignSystem_59d6d2.StatDisplay" value="14x" label="apalancamiento del aporte privado" color="primary" size="lg" align="left" hint-size="200px,110px"></x-import>
+      </div>
+    </div>
+  </section>
+  </sc-if>
+
+  <!-- ── EL MODELO ───────────────────────────────────────── -->
+  <section id="modelo" style="background:#ffffff;">
+    <div style="max-width:1180px;margin:0 auto;padding:90px 24px;display:flex;gap:72px;align-items:center;flex-wrap:wrap;">
+      <div style="flex:1;min-width:340px;">
+        <h2 style="margin-top:0;font-size:42px;font-weight:700;color:#7A80A3;line-height:1.1;">Colaboración<br>público-privada</h2>
+        <sc-if value="{{ bilingual }}" hint-placeholder-val="{{ false }}">
+          <p style="margin-top:8px;font-size:19px;font-style:italic;color:#E28757;">Public–private collaboration</p>
+        </sc-if>
+        <div style="width:48px;height:3px;background:#E28757;border-radius:2px;margin:22px 0;"></div>
+        <p style="font-size:17px;line-height:1.65;color:#4D4E56;max-width:520px;">Gracias al aporte de empresas, desarrollamos iniciativas de infraestructura y equipamiento que permiten a los municipios <strong style="font-weight:700;color:#7A80A3;">acceder a financiamiento público</strong> que de otro modo no podrían desbloquear.</p>
+        <p style="margin-top:16px;font-size:17px;line-height:1.65;color:#4D4E56;max-width:520px;">Cada peso privado moviliza, en promedio, <strong style="font-weight:700;color:#E28757;">14 veces su valor</strong> en inversión pública para territorios postergados.</p>
+        <div style="margin-top:30px;">
+          <x-import component-from-global-scope="HuellaLocalDesignSystem_59d6d2.Button" variant="dark" size="md" href="#trabajo" hint-size="180px,46px">Cómo trabajamos →</x-import>
+        </div>
+      </div>
+      <div style="flex:0 0 460px;max-width:100%;">
+        <div style="position:relative;height:420px;border-radius:16px;overflow:hidden;background-image:repeating-linear-gradient(135deg,#eef0f3 0px,#eef0f3 18px,#e7e9ee 18px,#e7e9ee 36px);border:1px solid rgba(122,128,163,0.18);display:flex;align-items:center;justify-content:center;">
+          <span style="font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:12px;color:#8A8C9A;letter-spacing:0.04em;">[ photo — ground-breaking ceremony ]</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CÓMO TRABAJAMOS / EJES ──────────────────────────── -->
+  <section id="trabajo" style="background:#F7F8F9;">
+    <div style="max-width:1180px;margin:0 auto;padding:90px 24px;">
+      <div style="text-align:center;max-width:680px;margin:0 auto 52px;">
+        <div style="font-size:13px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#E28757;">Cómo trabajamos</div>
+        <h2 style="margin-top:10px;font-size:38px;font-weight:700;color:#7A80A3;line-height:1.12;">Un proceso de extremo a extremo</h2>
+        <p style="margin-top:16px;font-size:17px;line-height:1.6;color:#4D4E56;">Acompañamos a cada municipio desde el diagnóstico territorial hasta la postulación a fondos públicos y el inicio de obras.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+        <x-import component-from-global-scope="HuellaLocalDesignSystem_59d6d2.EjeCard" number="1" title="Diagnóstico territorial y priorización de iniciativas" action-label="Ver más →" hint-size="100%,210px"></x-import>
+        <x-import component-from-global-scope="HuellaLocalDesignSystem_59d6d2.EjeCard" number="2" title="Diseño técnico de proyectos de infraestructura" action-label="Ver más →" hint-size="100%,210px"></x-import>
+        <x-import component-from-global-scope="HuellaLocalDesignSystem_59d6d2.EjeCard" number="3" title="Postulación a fondos públicos y ejecución de obras" action-label="Ver más →" hint-size="100%,210px"></x-import>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROYECTOS ───────────────────────────────────────── -->
+  <sc-if value="{{ showProjects }}" hint-placeholder-val="{{ true }}">
+  <section id="proyectos" style="background:#ffffff;">
+    <div style="max-width:1180px;margin:0 auto;padding:90px 24px;">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:48px;">
+        <div>
+          <div style="font-size:13px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#E28757;">Cartera de proyectos</div>
+          <h2 style="margin-top:10px;font-size:38px;font-weight:700;color:#7A80A3;line-height:1.12;">Obras de alto impacto social</h2>
+        </div>
+        <x-import component-from-global-scope="HuellaLocalDesignSystem_59d6d2.Button" variant="ghost" size="md" href="#proyectos" hint-size="160px,44px">Ver todos →</x-import>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;">
+
+        <x-import component-from-global-scope="HuellaLocalDesignSystem_59d6d2.Card" padding="none" hint-size="100%,400px">
+          <div style="position:relative;height:200px;background-image:repeating-linear-gradient(135deg,#eef0f3 0px,#eef0f3 16px,#e7e9ee 16px,#e7e9ee 32px);border-top-left-radius:10px;border-top-right-radius:10px;display:flex;align-items:center;justify-content:center;">
+            <span style="font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;color:#8A8C9A;">[ photo — Plaza Mejillones ]</span>
+          </div>
+          <div style="padding:24px;">
+            <x-import component-from-global-scope="HuellaLocalDesignSystem_59d6d2.Badge" variant="verde" size="sm" hint-size="120px,24px">En ejecución</x-import>
+            <h3 style="margin-top:14px;font-size:21px;font-weight:700;color:#4D4E56;line-height:1.2;">Mejoramiento Plaza de Armas</h3>
+            <p style="margin-top:6px;font-size:14px;color:#8A8C9A;">Mejillones · Región de Antofagasta</p>
+            <p style="margin-top:14px;font-size:15px;line-height:1.55;color:#4D4E56;">13.467 beneficiarios · 3.459 m² intervenidos · $1.507 MM de ejecución.</p>
+          </div>
+        </x-import>
+
+        <x-import component-from-global-scope="HuellaLocalDesignSystem_59d6d2.Card" padding="none" hint-size="100%,400px">
+          <div style="position:relative;height:200px;background-image:repeating-linear-gradient(135deg,#eef0f3 0px,#eef0f3 16px,#e7e9ee 16px,#e7e9ee 32px);border-top-left-radius:10px;border-top-right-radius:10px;display:flex;align-items:center;justify-content:center;">
+            <span style="font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;color:#8A8C9A;">[ photo — APR Vallenar ]</span>
+          </div>
+          <div style="padding:24px;">
+            <x-import component-from-global-scope="HuellaLocalDesignSystem_59d6d2.Badge" variant="accent" size="sm" hint-size="120px,24px">En diseño</x-import>
+            <h3 style="margin-top:14px;font-size:21px;font-weight:700;color:#4D4E56;line-height:1.2;">Sistema de agua potable rural</h3>
+            <p style="margin-top:6px;font-size:14px;color:#8A8C9A;">Vallenar · Región de Atacama</p>
+            <p style="margin-top:14px;font-size:15px;line-height:1.55;color:#4D4E56;">Acceso hídrico seguro para comunidades del secano interior.</p>
+          </div>
+        </x-import>
+
+        <x-import component-from-global-scope="HuellaLocalDesignSystem_59d6d2.Card" padding="none" hint-size="100%,400px">
+          <div style="position:relative;height:200px;background-image:repeating-linear-gradient(135deg,#eef0f3 0px,#eef0f3 16px,#e7e9ee 16px,#e7e9ee 32px);border-top-left-radius:10px;border-top-right-radius:10px;display:flex;align-items:center;justify-content:center;">
+            <span style="font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;color:#8A8C9A;">[ photo — Centro comunitario ]</span>
+          </div>
+          <div style="padding:24px;">
+            <x-import component-from-global-scope="HuellaLocalDesignSystem_59d6d2.Badge" variant="primary" size="sm" hint-size="120px,24px">Postulación</x-import>
+            <h3 style="margin-top:14px;font-size:21px;font-weight:700;color:#4D4E56;line-height:1.2;">Centro comunitario y deportivo</h3>
+            <p style="margin-top:6px;font-size:14px;color:#8A8C9A;">Ñuble · Zona de rezago</p>
+            <p style="margin-top:14px;font-size:15px;line-height:1.55;color:#4D4E56;">Equipamiento social para una comuna prioritaria del país.</p>
+          </div>
+        </x-import>
+
+      </div>
+    </div>
+  </section>
+  </sc-if>
+
+  <!-- ── ALIADOS ─────────────────────────────────────────── -->
+  <sc-if value="{{ showAliados }}" hint-placeholder-val="{{ true }}">
+  <section id="aliados" style="background:#F7F8F9;border-top:1px solid rgba(122,128,163,0.18);">
+    <div style="max-width:1180px;margin:0 auto;padding:72px 24px;text-align:center;">
+      <div style="font-size:13px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#8A8C9A;">Empresas y aliados que hacen posible nuestro trabajo</div>
+      <div style="margin-top:36px;display:grid;grid-template-columns:repeat(5,1fr);gap:20px;">
+        <div style="height:64px;border-radius:8px;background:#ffffff;border:1px solid rgba(122,128,163,0.18);display:flex;align-items:center;justify-content:center;font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#b0b2bf;">logo</div>
+        <div style="height:64px;border-radius:8px;background:#ffffff;border:1px solid rgba(122,128,163,0.18);display:flex;align-items:center;justify-content:center;font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#b0b2bf;">logo</div>
+        <div style="height:64px;border-radius:8px;background:#ffffff;border:1px solid rgba(122,128,163,0.18);display:flex;align-items:center;justify-content:center;font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#b0b2bf;">logo</div>
+        <div style="height:64px;border-radius:8px;background:#ffffff;border:1px solid rgba(122,128,163,0.18);display:flex;align-items:center;justify-content:center;font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#b0b2bf;">logo</div>
+        <div style="height:64px;border-radius:8px;background:#ffffff;border:1px solid rgba(122,128,163,0.18);display:flex;align-items:center;justify-content:center;font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#b0b2bf;">logo</div>
+      </div>
+    </div>
+  </section>
+  </sc-if>
+
+  <!-- ── CTA ─────────────────────────────────────────────── -->
+  <section id="sumar" style="position:relative;overflow:hidden;background:linear-gradient(160deg,#8DC899 0%,#7BA884 55%,#78AA6D 100%);">
+    <div style="max-width:1180px;margin:0 auto;padding:80px 24px;display:flex;align-items:center;justify-content:space-between;gap:48px;flex-wrap:wrap;">
+      <div style="flex:1;min-width:320px;">
+        <h2 style="font-size:40px;font-weight:700;color:#ffffff;line-height:1.1;">Suma a tu empresa al desarrollo local</h2>
+        <p style="margin-top:16px;font-size:18px;line-height:1.6;color:rgba(255,255,255,0.92);max-width:560px;">Tu aporte se multiplica por 14 en inversión pública para los territorios que más lo necesitan. Conversemos sobre cómo participar.</p>
+      </div>
+      <div style="flex:none;">
+        <x-import component-from-global-scope="HuellaLocalDesignSystem_59d6d2.Button" variant="primary" size="lg" href="#contacto" hint-size="180px,54px">Quiero participar</x-import>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ──────────────────────────────────────────── -->
+  <footer id="contacto" style="background:#2A2B30;color:rgba(255,255,255,0.78);">
+    <div style="max-width:1180px;margin:0 auto;padding:64px 24px 40px;display:flex;gap:56px;flex-wrap:wrap;">
+      <div style="flex:1;min-width:280px;">
+        <img src="../../assets/brand/logo-blanco-v2.svg" alt="Huella Local" style="height:36px;width:auto;display:block;">
+        <p style="margin-top:20px;font-size:15px;line-height:1.65;max-width:340px;color:rgba(255,255,255,0.7);">Impulsamos el desarrollo equitativo de los territorios de Chile a través de la colaboración público-privada.</p>
+        <div style="margin-top:22px;font-size:15px;font-weight:700;color:#ffffff;">www.huellalocal.cl</div>
+      </div>
+      <div style="flex:none;display:flex;gap:64px;flex-wrap:wrap;">
+        <div>
+          <div style="font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#8DC899;margin-bottom:16px;">Fundación</div>
+          <a href="#modelo" style="display:block;font-size:15px;margin-bottom:11px;color:rgba(255,255,255,0.78);">El modelo</a>
+          <a href="#trabajo" style="display:block;font-size:15px;margin-bottom:11px;color:rgba(255,255,255,0.78);">Cómo trabajamos</a>
+          <a href="#proyectos" style="display:block;font-size:15px;margin-bottom:11px;color:rgba(255,255,255,0.78);">Proyectos</a>
+        </div>
+        <div>
+          <div style="font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#8DC899;margin-bottom:16px;">Contacto</div>
+          <a href="#sumar" style="display:block;font-size:15px;margin-bottom:11px;color:rgba(255,255,255,0.78);">Suma tu empresa</a>
+          <a href="#aliados" style="display:block;font-size:15px;margin-bottom:11px;color:rgba(255,255,255,0.78);">Aliados</a>
+          <a href="#contacto" style="display:block;font-size:15px;margin-bottom:11px;color:rgba(255,255,255,0.78);">Escríbenos</a>
+        </div>
+      </div>
+    </div>
+    <div style="max-width:1180px;margin:0 auto;padding:0 24px 32px;font-size:13px;color:rgba(255,255,255,0.45);">© 2026 Fundación Huella Local · Santiago, Chile</div>
+    <div style="display:flex;height:10px;">
+      <div style="flex:1;background:#8DC899;"></div>
+      <div style="flex:1;background:#FECC52;"></div>
+      <div style="flex:1;background:#E28757;"></div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;showImpact&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot; },
+  &quot;showProjects&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot; },
+  &quot;showAliados&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot; },
+  &quot;bilingual&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: false, &quot;tsType&quot;: &quot;boolean&quot; }
+}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      showImpact: this.props.showImpact ?? true,
+      showProjects: this.props.showProjects ?? true,
+      showAliados: this.props.showAliados ?? true,
+      bilingual: this.props.bilingual ?? false,
+    };
+  }
+}
+</script>
+</body>
+</html>

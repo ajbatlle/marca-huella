@@ -1,0 +1,78 @@
+<!-- @dsCard group="Brand" viewport="700x380" name="Iconografía — Material Symbols" subtitle="Google Material Symbols Outlined — íconos del sistema" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    body { margin: 0; padding: 18px 20px; background: var(--color-surface); font-family: var(--font-primary); }
+    .section-title { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-text-muted); margin: 0 0 10px; }
+    .grid { display: grid; grid-template-columns: repeat(9, 1fr); gap: 6px; margin-bottom: 20px; }
+    .chip { display: flex; flex-direction: column; align-items: center; gap: 5px; padding: 10px 6px; border-radius: 8px; background: var(--color-surface-muted); }
+    .chip:hover { background: var(--hl-azul-200); }
+    .chip .icon { font-size: 26px; color: var(--color-primary); }
+    .chip .name { font-size: 8px; color: var(--color-text-muted); text-align: center; line-height: 1.2; }
+    .sizes-row { display: flex; gap: 16px; align-items: flex-end; margin-bottom: 20px; }
+    .size-item { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+    .size-label { font-size: 9px; color: var(--color-text-muted); font-weight: 700; }
+    .usage { display: flex; gap: 14px; }
+    .usage-item { flex: 1; background: var(--color-surface-muted); border-radius: 8px; padding: 10px 12px; }
+    .usage-item .u-title { font-size: 10px; font-weight: 700; color: var(--color-text); margin-bottom: 6px; }
+    .usage-item .u-ex { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--color-text); }
+    .usage-item .icon { color: var(--color-primary); }
+  </style>
+</head>
+<body>
+  <div class="section-title">Íconos frecuentes — infraestructura, agua, comunidad, clima</div>
+  <div class="grid">
+    <div class="chip"><span class="icon">water_drop</span><span class="name">water_drop</span></div>
+    <div class="chip"><span class="icon">foundation</span><span class="name">foundation</span></div>
+    <div class="chip"><span class="icon">groups</span><span class="name">groups</span></div>
+    <div class="chip"><span class="icon">park</span><span class="name">park</span></div>
+    <div class="chip"><span class="icon">solar_power</span><span class="name">solar_power</span></div>
+    <div class="chip"><span class="icon">thermostat</span><span class="name">thermostat</span></div>
+    <div class="chip"><span class="icon">location_city</span><span class="name">location_city</span></div>
+    <div class="chip"><span class="icon">eco</span><span class="name">eco</span></div>
+    <div class="chip"><span class="icon">handshake</span><span class="name">handshake</span></div>
+    <div class="chip"><span class="icon">local_hospital</span><span class="name">local_hospital</span></div>
+    <div class="chip"><span class="icon">agriculture</span><span class="name">agriculture</span></div>
+    <div class="chip"><span class="icon">school</span><span class="name">school</span></div>
+    <div class="chip"><span class="icon">bolt</span><span class="name">bolt</span></div>
+    <div class="chip"><span class="icon">flood</span><span class="name">flood</span></div>
+    <div class="chip"><span class="icon">storm</span><span class="name">storm</span></div>
+    <div class="chip"><span class="icon">construction</span><span class="name">construction</span></div>
+    <div class="chip"><span class="icon">account_balance</span><span class="name">account_balance</span></div>
+    <div class="chip"><span class="icon">volunteer_activism</span><span class="name">volunteer_activism</span></div>
+  </div>
+
+  <div class="section-title">Escala de tamaños</div>
+  <div class="sizes-row">
+    <div class="size-item"><span class="icon icon-xs" style="color:var(--color-primary);">water_drop</span><span class="size-label">xs · 16px</span></div>
+    <div class="size-item"><span class="icon icon-sm" style="color:var(--color-primary);">water_drop</span><span class="size-label">sm · 20px</span></div>
+    <div class="size-item"><span class="icon" style="color:var(--color-primary); font-size:24px;">water_drop</span><span class="size-label">md · 24px</span></div>
+    <div class="size-item"><span class="icon icon-lg" style="color:var(--color-primary);">water_drop</span><span class="size-label">lg · 32px</span></div>
+    <div class="size-item"><span class="icon icon-xl" style="color:var(--color-primary);">water_drop</span><span class="size-label">xl · 48px</span></div>
+    <div class="size-item"><span class="icon icon-2xl" style="color:var(--color-accent);">water_drop</span><span class="size-label">2xl · 64px</span></div>
+  </div>
+
+  <div class="section-title">Uso</div>
+  <div class="usage">
+    <div class="usage-item">
+      <div class="u-title">Inline con texto</div>
+      <div class="u-ex"><span class="icon icon-sm">water_drop</span> Gestión hídrica</div>
+    </div>
+    <div class="usage-item">
+      <div class="u-title">Botón con ícono</div>
+      <div class="u-ex"><span class="icon icon-sm">arrow_forward</span> Ver medidas</div>
+    </div>
+    <div class="usage-item">
+      <div class="u-title">Filled (énfasis)</div>
+      <div class="u-ex"><span class="icon icon-sm icon-filled" style="color:var(--color-accent);">eco</span> Activo</div>
+    </div>
+    <div class="usage-item">
+      <div class="u-title">HTML</div>
+      <div class="u-ex" style="font-size:10px; color:var(--color-text-muted); font-family:monospace;">&lt;span class="icon"&gt;water_drop&lt;/span&gt;</div>
+    </div>
+  </div>
+</body>
+</html>

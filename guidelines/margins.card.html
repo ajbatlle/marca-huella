@@ -1,0 +1,57 @@
+<!-- @dsCard group="Spacing" viewport="720x300" name="Outer Margins" subtitle="Escala de márgenes exteriores — nada pegado al borde" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    body { margin: 0; padding: 16px 18px; background: var(--color-surface); font-family: var(--font-primary); }
+    .wrap { display: flex; gap: 16px; align-items: stretch; }
+    /* Visual: a surface with safe-area inset */
+    .demo { flex: 0 0 300px; }
+    .surface { position: relative; height: 220px; background: var(--color-surface-muted); border: 1px solid var(--color-border); border-radius: var(--radius-md); overflow: hidden; }
+    .safe { position: absolute; inset: 28px; border: 1.5px dashed var(--color-accent); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; }
+    .safe-card { background: white; border: 1px solid var(--color-border); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+    .safe-txt { font-size: 10px; font-weight: 700; color: var(--color-text-muted); letter-spacing: 0.04em; }
+    .gut { position: absolute; font-size: 8px; font-weight: 700; color: var(--color-accent); letter-spacing: 0.06em; }
+    .gut.top { top: 9px; left: 50%; transform: translateX(-50%); }
+    .gut.left { left: 6px; top: 50%; transform: translateY(-50%) rotate(-90deg); }
+    .demo-cap { margin-top: 8px; font-size: 9.5px; color: var(--color-text-muted); line-height: 1.5; }
+
+    .list { flex: 1; display: flex; flex-direction: column; gap: 5px; }
+    .list-title { font-size: 10.5px; font-weight: 700; color: var(--color-text); margin-bottom: 3px; }
+    .item { display: flex; align-items: center; gap: 10px; }
+    .bar-wrap { flex: 1; }
+    .bar { height: 11px; background: var(--color-primary); border-radius: 3px; }
+    .label { font-size: 9.5px; font-weight: 700; color: var(--color-text); width: 110px; flex: none; }
+    .val { font-size: 9.5px; color: var(--color-text-muted); width: 36px; flex: none; text-align: right; }
+    .note { font-size: 9px; color: var(--color-text-muted); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="demo">
+      <div class="surface">
+        <div class="gut top">margen</div>
+        <div class="gut left">margen</div>
+        <div class="safe">
+          <div class="safe-card"><span class="safe-txt">zona segura de contenido</span></div>
+        </div>
+      </div>
+      <div class="demo-cap">El contenido nunca toca el borde: deja siempre el margen de la superficie.</div>
+    </div>
+
+    <div class="list">
+      <div class="list-title">Escala de márgenes exteriores</div>
+      <div class="item"><div class="label">--margin-xs</div><div class="bar-wrap"><div class="bar" style="width:16px;"></div></div><div class="val">16px</div></div>
+      <div class="item"><div class="label">--margin-sm</div><div class="bar-wrap"><div class="bar" style="width:24px;"></div></div><div class="val">24px</div></div>
+      <div class="item"><div class="label">--margin-md</div><div class="bar-wrap"><div class="bar" style="width:40px;"></div></div><div class="val">40px</div></div>
+      <div class="item"><div class="label">--margin-lg</div><div class="bar-wrap"><div class="bar" style="width:64px;"></div></div><div class="val">64px</div></div>
+      <div class="item"><div class="label">--margin-xl</div><div class="bar-wrap"><div class="bar" style="width:80px;"></div></div><div class="val">80px</div></div>
+      <div class="item" style="margin-top:6px;"><div class="label" style="color:var(--color-primary);">--slide-margin-x</div><div class="bar-wrap"><div class="bar" style="width:72px;background:var(--color-accent);"></div></div><div class="val">72px</div></div>
+      <div class="item"><div class="label" style="color:var(--color-primary);">--slide-margin-y</div><div class="bar-wrap"><div class="bar" style="width:52px;background:var(--color-accent);"></div></div><div class="val">52px</div></div>
+      <div class="note" style="margin-top:4px;">xs móvil · sm web · md/lg documentos · slide-* = zona segura 1280×720</div>
+    </div>
+  </div>
+</body>
+</html>

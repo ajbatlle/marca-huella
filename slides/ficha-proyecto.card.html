@@ -1,0 +1,144 @@
+<!-- @dsCard group="Slides" viewport="1280x720" name="Slide — Ficha de Proyecto" subtitle="Título · estado · stats unificados · foto · próximos pasos · franja verde" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { width: 1280px; height: 720px; overflow: hidden; font-family: var(--font-primary); background: white; }
+    .slide { width: 1280px; height: 720px; display: flex; flex-direction: column; }
+
+    /* Title bar */
+    .title-bar {
+      flex: none; padding: 20px 48px;
+      border-bottom: 2px solid var(--hl-gray-150);
+      display: flex; align-items: center; justify-content: space-between; gap: 24px;
+    }
+    .title-text { font-size: 28px; font-weight: 700; color: var(--color-text); line-height: 1.15; }
+    .sdg-stack { display: flex; gap: 5px; flex: none; }
+    .sdg { width: 42px; height: 42px; border-radius: 4px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; gap: 1px; }
+    .sdg-n { font-size: 13px; font-weight: 700; }
+    .sdg-l { font-size: 5px; font-weight: 700; text-align: center; text-transform: uppercase; max-width: 34px; line-height: 1.2; }
+
+    /* Body */
+    .body { flex: 1; display: flex; min-height: 0; }
+
+    /* ── LEFT COLUMN ─────────────────────────────────── */
+    .left {
+      flex: 0 0 600px;
+      padding: 24px 40px 20px 48px;
+      display: flex; flex-direction: column;
+      border-right: 1px solid var(--hl-gray-150);
+    }
+
+    /* Estado — single compact line */
+    .estado {
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 20px;
+    }
+    .estado-lbl {
+      font-size: 13px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.08em; color: var(--color-text-muted);
+    }
+    .estado-val {
+      background: var(--color-accent); color: white;
+      font-size: 13px; font-weight: 700;
+      padding: 4px 14px; border-radius: 99px;
+    }
+
+    /* Stats grid — strict uniform system */
+    .stats { display: flex; flex-direction: column; gap: 0; }
+    .s-row {
+      display: flex; align-items: center; gap: 0;
+      padding: 10px 0;
+      border-top: 1px solid var(--hl-gray-100);
+    }
+    /* Fixed-width number column — same for every row, no exceptions */
+    .s-num {
+      flex: 0 0 230px;
+      font-size: 24px; font-weight: 700;
+      color: var(--hl-azul-500);
+      line-height: 1; white-space: nowrap;
+    }
+    /* Label — same size and weight for every row, no exceptions */
+    .s-lbl {
+      flex: 1;
+      font-size: 16px; font-weight: 400;
+      color: var(--color-text-muted); line-height: 1.3;
+    }
+    .s-lbl b { font-weight: 700; color: var(--color-text); }
+
+    /* ── RIGHT COLUMN ────────────────────────────────── */
+    .right {
+      flex: 1;
+      padding: 24px 48px 20px 28px;
+      display: flex; flex-direction: column; gap: 14px;
+    }
+    .photo-ph {
+      flex: 1; border-radius: 10px;
+      background: var(--hl-gray-100); border: 2px dashed var(--hl-gray-300);
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+    }
+    .photo-ph svg { opacity: 0.35; }
+    .photo-lbl { font-size: 13px; color: var(--hl-gray-400); font-weight: 500; }
+    .next { background: var(--hl-gray-50); border-radius: 8px; padding: 14px 18px; flex: none; }
+    .next-t { font-size: 15px; font-weight: 700; color: var(--color-text); margin-bottom: 8px; }
+    .next-i { font-size: 13px; color: var(--color-text-muted); line-height: 1.6; }
+
+    /* Footer */
+    .footer { flex: none; line-height: 0; }
+    .footer img { width: 100%; display: block; }
+  </style>
+</head>
+<body>
+  <div class="slide">
+
+    <div class="title-bar">
+      <div class="title-text">1. Mejoramiento Plaza de Armas | Mejillones</div>
+      <div class="sdg-stack">
+        <div class="sdg" style="background:#FD9D24;"><span class="sdg-n">11</span><span class="sdg-l">Ciudades sostenibles</span></div>
+        <div class="sdg" style="background:#1E4167;"><span class="sdg-n">17</span><span class="sdg-l">Alianzas p/ objetivos</span></div>
+      </div>
+    </div>
+
+    <div class="body">
+      <div class="left">
+        <div class="estado">
+          <span class="estado-lbl">Estado</span>
+          <span class="estado-val">Expediente final entregado al municipio</span>
+        </div>
+        <div class="stats">
+          <div class="s-row"><span class="s-num">$1.507.917.359</span><span class="s-lbl">monto de ejecución</span></div>
+          <div class="s-row"><span class="s-num">13.467</span><span class="s-lbl">beneficiarios — <b>población total</b></span></div>
+          <div class="s-row"><span class="s-num">$57.842.897</span><span class="s-lbl">costo de diseño</span></div>
+          <div class="s-row"><span class="s-num">2° sem. 2026</span><span class="s-lbl">inicio estimado de obras</span></div>
+          <div class="s-row"><span class="s-num">584</span><span class="s-lbl">vecinos en participaciones</span></div>
+          <div class="s-row"><span class="s-num">3.459 m²</span><span class="s-lbl">superficie a intervenir</span></div>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="photo-ph">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <rect x="2" y="7" width="36" height="26" rx="4" stroke="#B0B2BF" stroke-width="2.5" fill="none"/>
+            <circle cx="14" cy="17" r="4" stroke="#B0B2BF" stroke-width="2.5" fill="none"/>
+            <path d="M2 30l10-10 8 8 7-7 13 12" stroke="#B0B2BF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+          <span class="photo-lbl">Foto del proyecto</span>
+        </div>
+        <div class="next">
+          <div class="next-t">Próximos pasos</div>
+          <div class="next-i">— Aprobación Gastos de Operación y Mantenimiento, Concejo Municipal (abril 2025)</div>
+          <div class="next-i">— Formulación proyecto MIDESO y obtención RS (abril 2025)</div>
+          <div class="next-i">— Postulación a FNDR (mayo 2025)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <img src="../assets/brand/franja-verde.png" alt="Franja Verde">
+    </div>
+  </div>
+</body>
+</html>

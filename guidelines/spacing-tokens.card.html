@@ -1,0 +1,32 @@
+<!-- @dsCard group="Spacing" viewport="700x210" name="Spacing Scale" subtitle="4px base grid — space-1 to space-20" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    body { margin: 0; padding: 18px 20px; background: var(--color-surface); font-family: var(--font-primary); }
+    .rows { display: flex; flex-direction: column; gap: 6px; }
+    .item { display: flex; align-items: center; gap: 10px; }
+    .bar-wrap { flex: 1; }
+    .bar { height: 12px; background: var(--color-primary); border-radius: 3px; }
+    .label { font-size: 10px; font-weight: 700; color: var(--color-text-muted); width: 70px; flex: none; text-align: right; }
+    .val { font-size: 10px; color: var(--color-text-muted); width: 36px; flex: none; }
+  </style>
+</head>
+<body>
+  <div class="rows">
+    <div class="item"><div class="label">--space-1</div><div class="bar-wrap"><div class="bar" style="width:4px;"></div></div><div class="val">4px</div></div>
+    <div class="item"><div class="label">--space-2</div><div class="bar-wrap"><div class="bar" style="width:8px;"></div></div><div class="val">8px</div></div>
+    <div class="item"><div class="label">--space-3</div><div class="bar-wrap"><div class="bar" style="width:12px;"></div></div><div class="val">12px</div></div>
+    <div class="item"><div class="label">--space-4</div><div class="bar-wrap"><div class="bar" style="width:16px;"></div></div><div class="val">16px</div></div>
+    <div class="item"><div class="label">--space-5</div><div class="bar-wrap"><div class="bar" style="width:20px;"></div></div><div class="val">20px</div></div>
+    <div class="item"><div class="label">--space-6</div><div class="bar-wrap"><div class="bar" style="width:24px;"></div></div><div class="val">24px</div></div>
+    <div class="item"><div class="label">--space-8</div><div class="bar-wrap"><div class="bar" style="width:32px;"></div></div><div class="val">32px</div></div>
+    <div class="item"><div class="label">--space-10</div><div class="bar-wrap"><div class="bar" style="width:40px;"></div></div><div class="val">40px</div></div>
+    <div class="item"><div class="label">--space-12</div><div class="bar-wrap"><div class="bar" style="width:48px;"></div></div><div class="val">48px</div></div>
+    <div class="item"><div class="label">--space-16</div><div class="bar-wrap"><div class="bar" style="width:64px;"></div></div><div class="val">64px</div></div>
+    <div class="item"><div class="label">--space-20</div><div class="bar-wrap"><div class="bar" style="width:80px;"></div></div><div class="val">80px</div></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!-- @dsCard group="Brand" viewport="1200x800" name="Ilustraciones — Línea Art Ciudades" subtitle="Catálogo de localidades — Tipo 2 Line Art" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ilustraciones — Línea Art Ciudades</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 1200px; height: 800px; font-family: var(--font-primary); background: var(--color-surface-muted); overflow: hidden; }
+    .container { padding: 48px; height: 100%; display: flex; flex-direction: column; gap: 32px; }
+    .title { font-size: 28px; font-weight: 600; color: var(--color-text); }
+    .subtitle { font-size: 13px; color: var(--color-text-muted); letter-spacing: 0.5px; text-transform: uppercase; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; flex: 1; overflow-y: auto; padding-right: 8px; }
+    .card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.08); display: flex; flex-direction: column; transition: box-shadow 0.2s; }
+    .card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
+    .image { width: 100%; height: 180px; background: var(--color-surface-muted); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .image img { width: 100%; height: 100%; object-fit: cover; }
+    .info { padding: 16px; border-top: 1px solid var(--color-border); }
+    .name { font-size: 14px; font-weight: 600; color: var(--color-text); margin-bottom: 4px; }
+    .path { font-size: 11px; color: var(--color-text-muted); font-family: 'Monaco', monospace; word-break: break-all; }
+    .status { display: inline-block; margin-top: 8px; padding: 3px 8px; background: var(--hl-verde-mint); color: white; font-size: 10px; font-weight: 600; border-radius: 3px; text-transform: uppercase; letter-spacing: 0.5px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div>
+      <h1 class="title">Ilustraciones — Línea Art Ciudades</h1>
+      <p class="subtitle">Catálogo de localidades donde trabaja Huella Local</p>
+    </div>
+
+    <div class="grid">
+      <!-- Mejillones -->
+      <div class="card">
+        <div class="image">
+          <img src="../assets/illustrations/mejillones/Mejillones.png" alt="Mejillones — línea art">
+        </div>
+        <div class="info">
+          <div class="name">Mejillones</div>
+          <div class="path">assets/illustrations/mejillones/</div>
+          <span class="status">Activo</span>
+        </div>
+      </div>
+
+      <!-- Placeholder para próximas -->
+      <div class="card" style="opacity: 0.5;">
+        <div class="image" style="background: var(--color-surface); border: 2px dashed var(--color-border); color: var(--color-text-muted); font-size: 12px;">
+          Próxima localidad
+        </div>
+        <div class="info">
+          <div class="name">Esperando...</div>
+          <div class="path">uploads/</div>
+        </div>
+      </div>
+
+      <div class="card" style="opacity: 0.5;">
+        <div class="image" style="background: var(--color-surface); border: 2px dashed var(--color-border); color: var(--color-text-muted); font-size: 12px;">
+          Próxima localidad
+        </div>
+        <div class="info">
+          <div class="name">Esperando...</div>
+          <div class="path">uploads/</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

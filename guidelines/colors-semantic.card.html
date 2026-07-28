@@ -1,0 +1,29 @@
+<!-- @dsCard group="Colors" viewport="700x230" name="Semantic Palette" subtitle="Semantic token → role mapping" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    body { margin: 0; padding: 18px 20px; background: var(--color-surface); font-family: var(--font-primary); }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+    .token { display: flex; align-items: center; gap: 10px; padding: 7px 10px; background: var(--color-surface-muted); border-radius: 6px; }
+    .swatch { width: 26px; height: 26px; border-radius: 4px; flex: none; border: 1px solid rgba(0,0,0,0.08); }
+    .info { flex: 1; min-width: 0; }
+    .tname { font-size: 10px; font-weight: 700; color: var(--color-text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .tval  { font-size: 9px; color: var(--color-text-muted); }
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <div class="token"><div class="swatch" style="background:var(--color-primary);"></div><div class="info"><div class="tname">--color-primary</div><div class="tval">azul-500 · headings, stripes</div></div></div>
+    <div class="token"><div class="swatch" style="background:var(--color-accent);"></div><div class="info"><div class="tname">--color-accent</div><div class="tval">naranja-500 · CTAs, highlights</div></div></div>
+    <div class="token"><div class="swatch" style="background:var(--color-brand-green);"></div><div class="info"><div class="tname">--color-brand-green</div><div class="tval">verde-500 · logo, sustainability</div></div></div>
+    <div class="token"><div class="swatch" style="background:var(--color-text);"></div><div class="info"><div class="tname">--color-text</div><div class="tval">gray-700 · body copy</div></div></div>
+    <div class="token"><div class="swatch" style="background:var(--color-surface);  border:1px solid var(--color-border);"></div><div class="info"><div class="tname">--color-surface</div><div class="tval">white · card backgrounds</div></div></div>
+    <div class="token"><div class="swatch" style="background:var(--color-surface-muted);  border:1px solid var(--color-border);"></div><div class="info"><div class="tname">--color-surface-muted</div><div class="tval">gray-50 · page background</div></div></div>
+    <div class="token"><div class="swatch" style="background:var(--color-overlay-photo);"></div><div class="info"><div class="tname">--color-overlay-photo</div><div class="tval">azul 60% · photo tint</div></div></div>
+    <div class="token"><div class="swatch" style="background:var(--color-border); border:1px solid var(--hl-gray-300);"></div><div class="info"><div class="tname">--color-border</div><div class="tval">azul 18% · card borders</div></div></div>
+  </div>
+</body>
+</html>

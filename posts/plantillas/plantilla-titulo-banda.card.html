@@ -1,0 +1,67 @@
+<!-- @dsCard group="Plantillas (sin texto)" viewport="1080x1350" name="Plantilla — Título + Imagen" subtitle="Franjas · logo · banda naranja · zona de bajada · imagen — sin texto" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: var(--post-w); height: var(--post-h); overflow: hidden;
+      font-family: var(--font-primary);
+      background: var(--color-post-bg);
+    }
+    .post {
+      width: var(--post-w); height: var(--post-h);
+      display: flex; flex-direction: column;
+      background: var(--color-post-bg);
+      position: relative;
+    }
+    .stripe-top    { flex: none; height: var(--post-stripe); background: var(--color-post-frame); }
+    .stripe-bottom { flex: none; height: var(--post-stripe); background: var(--color-post-accent); }
+
+    .header {
+      flex: none;
+      display: flex; align-items: center; justify-content: flex-end;
+      padding: 32px var(--post-margin) 28px;
+    }
+    .logo { height: 60px; width: auto; display: block; }
+
+    .title-band {
+      flex: none;
+      background: var(--color-post-accent);
+      height: 98px;
+    }
+
+    .subtitle {
+      flex: none;
+      height: 138px;
+    }
+
+    .figure {
+      flex: 1;
+      margin: 0 var(--post-margin) 32px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: var(--hl-gray-150);
+    }
+  </style>
+</head>
+<body>
+  <div class="post">
+    <div class="stripe-top"></div>
+
+    <div class="header">
+      <img class="logo" src="../../assets/brand/logo-color-v2.svg" alt="Huella Local">
+    </div>
+
+    <div class="title-band"></div>
+
+    <div class="subtitle"></div>
+
+    <div class="figure"></div>
+
+    <div class="stripe-bottom"></div>
+  </div>
+</body>
+</html>

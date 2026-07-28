@@ -1,0 +1,86 @@
+<!-- @dsCard group="Slides" viewport="1280x720" name="Stats Slide — 4 cifras" subtitle="StatDisplay · impacto · franja verde" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../styles.css">
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="../_ds_bundle.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { width: 1280px; height: 720px; overflow: hidden; font-family: var(--font-primary); background: white; }
+    .slide { width: 1280px; height: 720px; display: flex; flex-direction: column; }
+
+    .body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 40px 72px 36px;
+      gap: 0;
+    }
+
+    .slide-title {
+      font-size: 38px; font-weight: 700;
+      color: var(--color-text); line-height: 1.1;
+      margin-top: 10px; margin-bottom: 20px;
+    }
+
+    .accent-bar {
+      width: 48px; height: 3px;
+      background: var(--color-accent);
+      border-radius: 2px;
+      margin-bottom: 32px;
+      flex: none;
+    }
+
+    .stats-grid {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      justify-content: center;
+    }
+
+    .stats-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 56px;
+    }
+
+    .footer { flex: none; line-height: 0; }
+    .footer img { width: 100%; display: block; }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="body" id="root"></div>
+    <div class="footer">
+      <img src="../assets/brand/franja-verde.png" alt="Franja Verde — Huella Local">
+    </div>
+  </div>
+
+  <script type="text/babel">
+    const { StatDisplay } = window.HuellaLocalDesignSystem_59d6d2;
+
+    ReactDOM.createRoot(document.getElementById('root')).render(
+      <>
+        <div className="slide-title">Huella Local en cifras<br/>estos 10 años de trabajo</div>
+        <div className="accent-bar"></div>
+        <div className="stats-grid">
+          <div className="stats-row">
+            <StatDisplay value="+1.000.000" label="beneficiarios" color="primary" size="lg" />
+            <StatDisplay value="25x" label="veces aporte privado" color="primary" size="lg" />
+            <StatDisplay value="288" label="iniciativas de inversión pública" color="primary" size="lg" />
+          </div>
+          <div className="stats-row">
+            <StatDisplay value="148MM USD" label="inversión pública" color="accent" size="lg" />
+            <StatDisplay value="5,8MM USD" label="aportes para cartera de inversión pública" color="primary" size="lg" />
+          </div>
+        </div>
+      </>
+    );
+  </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!-- @dsCard group="Plantillas (sin texto)" viewport="1080x1350" name="Plantilla — Cifra / Dato" subtitle="Franjas · pill · zona de cifras · logo al pie — sin texto" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: var(--post-w); height: var(--post-h); overflow: hidden;
+      font-family: var(--font-primary);
+      background: var(--color-post-bg);
+    }
+    .post {
+      width: var(--post-w); height: var(--post-h);
+      display: flex; flex-direction: column;
+      background: var(--color-post-bg);
+    }
+    .stripe-top    { flex: none; height: var(--post-stripe); background: var(--color-post-frame); }
+    .stripe-bottom { flex: none; height: var(--post-stripe); background: var(--color-post-accent); }
+
+    .intro {
+      flex: none;
+      display: flex; justify-content: center;
+      padding: 32px var(--post-margin) 0;
+    }
+    .pill {
+      background: var(--color-post-frame);
+      width: 620px; height: 62px;
+      border-radius: var(--radius-sm);
+    }
+
+    .stats {
+      flex: 1;
+    }
+
+    .footer {
+      flex: none;
+      display: flex; justify-content: center;
+      padding: 0 var(--post-margin) 32px;
+    }
+    .footer img { height: 60px; width: auto; display: block; }
+  </style>
+</head>
+<body>
+  <div class="post">
+    <div class="stripe-top"></div>
+
+    <div class="intro">
+      <span class="pill"></span>
+    </div>
+
+    <div class="stats"></div>
+
+    <div class="footer">
+      <img src="../../assets/brand/logo-color-v2.svg" alt="Huella Local">
+    </div>
+
+    <div class="stripe-bottom"></div>
+  </div>
+</body>
+</html>

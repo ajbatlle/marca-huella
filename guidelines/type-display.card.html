@@ -1,0 +1,33 @@
+<!-- @dsCard group="Type" viewport="700x300" name="Display & Headings" subtitle="Montserrat 700 & 600 — extrabold prohibido" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    body { margin: 0; padding: 18px 20px; background: var(--color-surface); font-family: var(--font-primary); }
+    .specimen { margin-bottom: 14px; border-bottom: 1px solid var(--color-border); padding-bottom: 12px; }
+    .specimen:last-child { border-bottom: none; margin-bottom: 0; }
+    .meta { font-size: 9px; font-weight: 700; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 4px; }
+    .meta .no { color: var(--color-accent); }
+  </style>
+</head>
+<body>
+  <div class="specimen">
+    <div class="meta">Display — 700 · uppercase · text-2xl (26px)</div>
+    <div style="font-size:var(--text-2xl); font-weight:var(--font-bold); color:var(--color-primary); text-transform:uppercase; letter-spacing:var(--tracking-wider); line-height:var(--leading-tight);">DIAGNÓSTICO Y EJES</div>
+  </div>
+  <div class="specimen">
+    <div class="meta">Heading — 600 semibold · sentence case · text-3xl (36px)</div>
+    <div style="font-size:var(--text-3xl); font-weight:var(--font-semibold); color:var(--color-text); line-height:var(--leading-snug);">Colaboración público-privada</div>
+  </div>
+  <div class="specimen">
+    <div class="meta">Stat display — 700 bold · azul · text-4xl (48px)</div>
+    <div style="font-size:var(--text-4xl); font-weight:var(--font-bold); color:var(--color-primary); line-height:var(--leading-tight); letter-spacing:var(--tracking-tight);">948.190</div>
+  </div>
+  <div class="specimen">
+    <div class="meta"><span class="no">✗ Extrabold (800) prohibido</span> — usa bold (700) o semibold (600) para títulos</div>
+    <div style="font-size:var(--text-3xl); font-weight:var(--font-bold); color:var(--color-accent); line-height:var(--leading-tight);">+110M USD</div>
+  </div>
+</body>
+</html>

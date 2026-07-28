@@ -1,0 +1,58 @@
+<!-- @dsCard group="Plantillas (sin texto)" viewport="1080x1350" name="Plantilla — Foto + Bajada" subtitle="Franjas · logo · foto protagonista · zona de título — sin texto" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: var(--post-w); height: var(--post-h); overflow: hidden;
+      font-family: var(--font-primary);
+      background: var(--color-post-bg);
+    }
+    .post {
+      width: var(--post-w); height: var(--post-h);
+      display: flex; flex-direction: column;
+      background: var(--color-post-bg);
+    }
+    .stripe-top    { flex: none; height: var(--post-stripe); background: var(--color-post-frame); }
+    .stripe-bottom { flex: none; height: var(--post-stripe); background: var(--color-post-accent); }
+
+    .header {
+      flex: none;
+      display: flex; align-items: center; justify-content: flex-end;
+      padding: 32px var(--post-margin) 20px;
+    }
+    .logo { height: 60px; width: auto; display: block; }
+
+    .figure {
+      flex: 1;
+      margin: 0 var(--post-margin);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: var(--hl-gray-150);
+    }
+
+    .caption {
+      flex: none;
+      height: 196px;
+    }
+  </style>
+</head>
+<body>
+  <div class="post">
+    <div class="stripe-top"></div>
+
+    <div class="header">
+      <img class="logo" src="../../assets/brand/logo-color-v2.svg" alt="Huella Local">
+    </div>
+
+    <div class="figure"></div>
+
+    <div class="caption"></div>
+
+    <div class="stripe-bottom"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!-- @dsCard group="Brand" viewport="720x300" name="Logo & Wordmark" subtitle="huellalocal® — color sobre blanco · blanco sobre color · negro solo B/N" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    body { margin: 0; padding: 16px 18px; background: var(--color-surface); font-family: var(--font-primary); }
+    .wrap { display: flex; gap: 12px; align-items: stretch; }
+    .col { display: flex; flex-direction: column; gap: 8px; }
+    .panel { border-radius: var(--radius-md); padding: 16px 18px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; flex: 1; }
+    .caption { font-size: 8.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; text-align: center; }
+    .tag { display:inline-block; font-size: 7.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; padding: 2px 7px; border-radius: var(--radius-full); }
+    .rules { flex: 0 0 200px; background: var(--color-surface-muted); border-radius: var(--radius-md); padding: 14px 16px; display: flex; flex-direction: column; gap: 8px; }
+    .rules-title { font-size: 10.5px; font-weight: 700; color: var(--color-text); }
+    .rule { font-size: 9.5px; color: var(--color-text-muted); line-height: 1.5; }
+    .rule strong { color: var(--color-text); font-weight: 700; }
+    .rule .warn { color: var(--color-accent); font-weight: 700; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="col" style="flex:1;">
+      <!-- Primary valid usages -->
+      <div style="display:flex; gap:8px;">
+        <!-- Color sobre blanco -->
+        <div class="panel" style="background:var(--hl-gray-50); border:1px solid var(--color-border);">
+          <img src="../assets/brand/logo-color-v2.svg" style="width:100%; max-width:190px; height:auto;" alt="huellalocal — color sobre blanco">
+          <span class="tag" style="background:var(--hl-verde-mint); color:#3a5a32;">Uso principal</span>
+          <div class="caption" style="color:var(--color-text-muted);">Color · sobre blanco / claro</div>
+        </div>
+      </div>
+      <!-- Blanco sobre color -->
+      <div style="display:flex; gap:8px;">
+        <div class="panel" style="background:var(--hl-azul-500);">
+          <img src="../assets/brand/logo-blanco-v2.svg" style="width:100%; max-width:120px; height:auto;" alt="blanco sobre azul">
+          <div class="caption" style="color:rgba(255,255,255,0.85);">Blanco · azul</div>
+        </div>
+        <div class="panel" style="background:var(--hl-verde-mint);">
+          <img src="../assets/brand/logo-blanco-v2.svg" style="width:100%; max-width:120px; height:auto;" alt="blanco sobre verde">
+          <div class="caption" style="color:rgba(255,255,255,0.85);">Blanco · verde mint</div>
+        </div>
+        <div class="panel" style="background:var(--hl-naranja-500);">
+          <img src="../assets/brand/logo-blanco-v2.svg" style="width:100%; max-width:120px; height:auto;" alt="blanco sobre naranja">
+          <div class="caption" style="color:rgba(255,255,255,0.9);">Blanco · naranja</div>
+        </div>
+        <!-- Negro — de-emphasized -->
+        <div class="panel" style="background:var(--hl-gray-100); border:1px dashed var(--color-border-strong); opacity:0.75; flex:0.8;">
+          <img src="../assets/brand/logo-negro-v2.svg" style="width:100%; max-width:90px; height:auto;" alt="negro">
+          <span class="tag" style="background:var(--hl-gray-200); color:var(--hl-gray-700);">Solo B/N</span>
+        </div>
+      </div>
+    </div>
+    <!-- Rules -->
+    <div class="rules">
+      <div class="rules-title">Uso del logo</div>
+      <div class="rule"><strong>1 · Color sobre blanco:</strong> uso principal. Documentos, web, encabezados y presentaciones sobre fondos claros.</div>
+      <div class="rule"><strong>2 · Blanco sobre color:</strong> sobre azul, verde, naranja, foto o cualquier fondo oscuro. El logo nunca se "apaga" en negro sobre color.</div>
+      <div class="rule"><span class="warn">Negro: casi nunca.</span> Únicamente impresión en blanco y negro, grabado o bordado a un color.</div>
+      <div class="rule"><span class="warn">No</span> recolorizar · no estirar · no usar el ícono solo salvo en tamaños muy pequeños.</div>
+    </div>
+  </div>
+</body>
+</html>

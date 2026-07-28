@@ -1,0 +1,97 @@
+<!-- @dsCard group="Slides" viewport="1280x720" name="Stats Slide — Tabla comparativa" subtitle="Tabla con header azul · filas alternadas · footer verde con logo" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { width: 1280px; height: 720px; overflow: hidden; font-family: var(--font-primary); background: white; }
+    .slide { width: 1280px; height: 720px; display: flex; flex-direction: column; }
+
+    /* Content area */
+    .body { flex: 1; padding: 52px 72px 28px; display: flex; flex-direction: column; gap: 32px; }
+    .slide-title { font-size: 38px; font-weight: 700; color: var(--color-text); line-height: 1.1; }
+
+    /* Table */
+    .table { width: 100%; border-collapse: collapse; }
+    .table th {
+      background: var(--hl-azul-500);
+      color: white;
+      font-weight: 700;
+      font-size: 17px;
+      padding: 14px 20px;
+      text-align: left;
+    }
+    .table th:not(:first-child) { text-align: center; border-left: 1px solid rgba(255,255,255,0.25); }
+    .table td {
+      padding: 14px 20px;
+      font-size: 15px;
+      color: var(--color-text);
+      vertical-align: middle;
+      border-bottom: 1px solid var(--hl-gray-150);
+    }
+    .table td:not(:first-child) {
+      text-align: center;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--color-primary);
+      border-left: 1px solid var(--hl-gray-200);
+    }
+    .table tr:nth-child(odd) td { background: white; }
+    .table tr:nth-child(even) td { background: var(--hl-gray-50); }
+    .table td:first-child { font-size: 15px; font-weight: 400; color: var(--color-text); width: 320px; line-height: 1.4; }
+
+    /* Footnote */
+    .footnote { font-size: 12px; font-weight: 700; color: var(--color-text-muted); line-height: 1.6; }
+
+    /* Footer */
+    .footer { flex: none; line-height: 0; }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="body">
+      <div class="slide-title">¿Qué vemos desde Huella Local?</div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Indicador</th>
+            <th>Comunas mejor ICVU</th>
+            <th>Zonas de rezago Ñuble</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Porcentaje puntaje PSU mayor a 450</td>
+            <td>96,20%</td>
+            <td>82,90%</td>
+          </tr>
+          <tr>
+            <td>Pobreza comunal por ingresos CASEN</td>
+            <td>1%</td>
+            <td>13,80%</td>
+          </tr>
+          <tr>
+            <td>N° funcionarios planta y contrata</td>
+            <td>876</td>
+            <td>64</td>
+          </tr>
+          <tr>
+            <td>Ingresos municipales propios permanentes per cápita</td>
+            <td>$679.240</td>
+            <td>$93.070</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="footnote">
+        SINIM; 2024<br>
+        Índice de Calidad de Vida Urbana UC - CChC
+      </div>
+    </div>
+    <div class="footer">
+      <img src="../assets/brand/franja-verde.png" style="width:100%; display:block;" alt="Franja Verde — Huella Local">
+    </div>
+  </div>
+</body>
+</html>

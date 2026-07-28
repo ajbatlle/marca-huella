@@ -1,0 +1,57 @@
+<!-- @dsCard group="Plantillas (sin texto)" viewport="1080x1350" name="Plantilla — Solo texto" subtitle="Sin franjas · logo · zonas de texto · pill al pie — sin texto" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: var(--post-w); height: var(--post-h); overflow: hidden;
+      font-family: var(--font-primary);
+      background: var(--color-post-bg);
+    }
+    .post {
+      width: var(--post-w); height: var(--post-h);
+      display: flex; flex-direction: column;
+      background: var(--color-post-bg);
+    }
+
+    .header {
+      flex: none;
+      display: flex; align-items: center; justify-content: flex-end;
+      padding: 56px var(--post-margin) 18px;
+    }
+    .logo { height: 60px; width: auto; display: block; }
+
+    .body {
+      flex: 1;
+      padding: 0 var(--post-margin);
+    }
+
+    .footer {
+      flex: none;
+      padding: 24px var(--post-margin) 56px;
+    }
+    .plazo {
+      display: inline-block;
+      background: var(--hl-naranja-500);
+      width: 440px; height: 66px;
+      border-radius: var(--radius-sm);
+    }
+  </style>
+</head>
+<body>
+  <div class="post">
+    <div class="header">
+      <img class="logo" src="../../assets/brand/logo-color-v2.svg" alt="Huella Local">
+    </div>
+
+    <div class="body"></div>
+
+    <div class="footer">
+      <span class="plazo"></span>
+    </div>
+  </div>
+</body>
+</html>

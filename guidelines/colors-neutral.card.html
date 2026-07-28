@@ -1,0 +1,28 @@
+<!-- @dsCard group="Colors" viewport="700x130" name="Neutral Grays" subtitle="Gray scale — 50 to 900" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    body { margin: 0; padding: 18px 20px; background: var(--color-surface); font-family: var(--font-primary); }
+    .row { display: flex; gap: 8px; }
+    .chip { flex: 1; }
+    .color { height: 44px; border-radius: 6px; }
+    .step { font-size: 10px; font-weight: 700; color: var(--color-text-muted); margin-top: 5px; text-align: center; display: block; }
+    .hex  { font-size: 9px; color: var(--color-text-muted); text-align: center; display: block; }
+  </style>
+</head>
+<body>
+  <div class="row">
+    <div class="chip"><div class="color" style="background:var(--hl-gray-50); border:1px solid var(--color-border);"></div><span class="step">50</span><span class="hex">#F7F8F9</span></div>
+    <div class="chip"><div class="color" style="background:var(--hl-gray-100);"></div><span class="step">100</span><span class="hex">#EFEFEF</span></div>
+    <div class="chip"><div class="color" style="background:var(--hl-gray-200);"></div><span class="step">200</span><span class="hex">#D1D3DC</span></div>
+    <div class="chip"><div class="color" style="background:var(--hl-gray-300);"></div><span class="step">300</span><span class="hex">#B0B2BF</span></div>
+    <div class="chip"><div class="color" style="background:var(--hl-gray-400);"></div><span class="step">400</span><span class="hex">#8A8C9A</span></div>
+    <div class="chip"><div class="color" style="background:var(--hl-gray-500);"></div><span class="step">500</span><span class="hex">#6B6D79</span></div>
+    <div class="chip"><div class="color" style="background:var(--hl-gray-700);"></div><span class="step">700</span><span class="hex">#4D4E56</span></div>
+    <div class="chip"><div class="color" style="background:var(--hl-gray-900);"></div><span class="step">900</span><span class="hex">#1E1F24</span></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!-- @dsCard group="Slides" viewport="1280x720" name="Content Slide" subtitle="Blanco · título · texto · imagen placeholder" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { width: 1280px; height: 720px; overflow: hidden; font-family: var(--font-primary); background: white; }
+    .slide { width: 1280px; height: 720px; display: flex; flex-direction: column; }
+    .stripe { height: 8px; background: var(--hl-azul-500); flex: none; }
+    .body { flex: 1; display: flex; padding: 52px 72px; gap: 64px; align-items: center; }
+
+    /* Left column — text */
+    .left { flex: 1; display: flex; flex-direction: column; gap: 0; }
+    h2 { font-size: 52px; font-weight: 700; color: var(--color-primary); line-height: 1.08; margin-bottom: 28px; }
+    .accent-bar { width: 48px; height: 3px; background: var(--color-accent); border-radius: 2px; margin-bottom: 22px; }
+    .body-text { font-size: 17px; line-height: 1.65; color: var(--color-text); max-width: 520px; }
+    .body-text strong { font-weight: 700; color: var(--color-primary); }
+
+    /* Right column — image placeholder */
+    .right { flex: 0 0 440px; height: 500px; }
+    .img-placeholder {
+      width: 100%; height: 100%;
+      border-radius: 12px;
+      background: var(--hl-gray-150);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 12px;
+      border: 2px dashed var(--hl-gray-300);
+    }
+    .ph-icon { width: 48px; height: 48px; opacity: 0.35; }
+    .ph-label { font-size: 13px; font-weight: 500; color: var(--hl-gray-400); letter-spacing: 0.02em; }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="stripe"></div>
+    <div class="body">
+      <div class="left">
+        <h2>Título de la<br>diapositiva aquí</h2>
+        <div class="accent-bar"></div>
+        <p class="body-text">
+          <strong>La colaboración público-privada</strong> fortalece a las comunidades, municipios y gobiernos regionales, mejorando sinergias y canales de participación ciudadana para el desarrollo local.
+        </p>
+      </div>
+      <div class="right">
+        <div class="img-placeholder">
+          <svg class="ph-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="8" width="40" height="32" rx="4" stroke="#8A8C9A" stroke-width="2.5" fill="none"/>
+            <circle cx="17" cy="20" r="4" stroke="#8A8C9A" stroke-width="2.5" fill="none"/>
+            <path d="M4 34l10-10 8 8 6-6 16 14" stroke="#8A8C9A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+          <span class="ph-label">Imagen</span>
+        </div>
+      </div>
+    </div>
+    <div class="stripe"></div>
+  </div>
+</body>
+</html>
