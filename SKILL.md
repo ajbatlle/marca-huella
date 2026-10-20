@@ -1,22 +1,24 @@
 ---
 name: huella-local-design
-description: Use this skill to generate well-branded interfaces and assets for Huella Local (Fundación Huella Local), a Chilean foundation that bridges private sector and municipalities for high-impact public infrastructure. Contains essential design guidelines, colors, typography, font tokens, visual assets, and UI kit components for prototyping or production.
+description: Usar este skill para diseñar piezas, láminas, documentos e interfaces con la marca de Fundación Huella Local, fundación chilena que articula empresas, municipios y comunidades para proyectos de infraestructura de alto impacto social. Trae las reglas de diseño, la paleta, la tipografía, los tokens, los recursos gráficos, los assets y los componentes web.
 user-invocable: true
 ---
 
-Read the README.md file within this skill, and explore the other available files.
+Lee `readme.md` completo antes de diseñar y revisa los demás archivos que necesites. El readme es la fuente de reglas; si algo de este archivo choca con el readme, manda el readme.
 
-If creating visual artifacts (slides, mocks, throwaway prototypes, infographics, etc), copy assets out of `assets/` and create static HTML files for the user to view. Load `styles.css` to get all design tokens. Use components from `components/core/` for reusable UI primitives.
+Para piezas visuales (láminas, posts, documentos, maquetas), copia los assets desde `assets/` y carga `styles.css` para tener todos los tokens. Para código de producción, lee los archivos de `tokens/`. Los componentes de `components/core/` son para la web.
 
-If working on production code, read the token files in `tokens/` and copy relevant assets to understand the brand system precisely. The readme.md contains the full visual foundations guide.
+Si te invocan sin más contexto, pregunta qué producto se va a hacer, para quién y en qué formato, y trabaja como diseñador de la marca.
 
-If the user invokes this skill without any other guidance, ask them what they want to build or design, ask some questions about the surface and audience, and act as an expert designer who outputs HTML artifacts _or_ production code, depending on the need.
-
-Key brand facts to remember:
-- Primary font: Montserrat (weights 400, 500, 600, 700 — NO 800)
-- Brand colors: Azul #7A80A3, Naranja #E28757, Verde #8DC899, Gris texto #4D4E56
-- Cards: white, border-radius 10px, subtle border + shadow-sm, hover to shadow-azul
-- Buttons: orange fill, uppercase, border-radius 10px
-- Photography: grayscale + azul overlay rgba(90,95,130,0.6)
-- Slides: thin azul stripes top/bottom, orange label pill above title, optional Franja Verde footer
-- Copy: Spanish primary, tú form, sentence case, bold key phrases inline, data-driven
+Lo esencial:
+- Paleta: azul `#7A80A3`, naranja `#E28757`, verde `#8DC899`, carbón `#4D4E56`, gris de fondo `#F7F8F9` y blanco. Solo colores de la paleta.
+- Montserrat de 300 a 700; 300 solo en titulares mezclado con semibold; 800 prohibido.
+- Capitalización normal siempre (solo siglas en mayúsculas) y sin tracking expandido. Jerarquía con peso, tamaño o color.
+- Lámina 1280 × 720 sobre grilla de 12 columnas, margen 72 px, título carbón semibold 40 px siempre arriba a la izquierda, folio al pie (logo, capítulo, número).
+- Franjas por defecto: azul arriba, naranja abajo. Se pueden omitir cuando la pieza lo pide.
+- En láminas y piezas no hay tarjetas con sombra, recuadros redondeados ni paneles de vidrio: se agrupa con línea fina o bloque plano de la paleta.
+- Recursos: mesh con grano, lámina frase, barra naranja de realce alineada al texto, mezcla de pesos, cifras protagonistas, fotos a sangre en serie, cuadro de compañía y separador de capítulo en duotono.
+- Fotos documentales: duotono (carbón y azul) en portadas y separadores; color natural en obras y personas.
+- Íconos Material Symbols, siempre con función.
+- Ilustración opcional, de tres tipos (panorámica azul paisaje, panorámica a color de Chile, isométricas). No se dibujan ilustraciones propias.
+- El sistema no guarda cifras de impacto: se toman de la fuente única vigente.

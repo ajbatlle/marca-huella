@@ -5,7 +5,7 @@
    For offline/production use, self-host the font files.
    ──────────────────────────────────────── */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600;1,700&display=swap');
 
 :root {
   /* Font families */
@@ -27,6 +27,7 @@
   /* ── Font weight ──────────────────────────────────────────── */
   /* Extrabold/black (800) is PROHIBITED. Heaviest weight is bold 700.
      Use semibold (600) or bold (700) for titles and headings. */
+  --font-light:    300;   /* solo titulares y frases grandes, mezclado con semibold */
   --font-regular:  400;
   --font-medium:   500;
   --font-semibold: 600;   /* titles, headings (lighter option)   */
@@ -41,9 +42,7 @@
   --leading-relaxed: 1.7;
 
   /* ── Letter spacing ───────────────────────────────────────── */
+  /* Sin tracking expandido: solo normal, o un leve ajuste negativo en titulares grandes. */
   --tracking-tight:   -0.01em;
   --tracking-normal:   0em;
-  --tracking-wide:     0.04em;
-  --tracking-wider:    0.07em;
-  --tracking-widest:   0.12em;
 }

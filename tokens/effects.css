@@ -13,11 +13,14 @@
   --blur-md: blur(10px);  /* @kind other */
   --blur-lg: blur(20px);  /* @kind other */
 
-  /* ── Glass morphism ───────────────────────────────────────── */
-  /* Used in hero info panels over photo backgrounds */
-  --glass-bg:        rgba(255, 255, 255, 0.15);
-  --glass-border:    rgba(255, 255, 255, 0.20);
-  --glass-bg-dark:   rgba(0, 0, 0, 0.30);
+  /* ── Grano ────────────────────────────────────────────────── */
+  /* Ruido fractal en blanco y negro sobre mesh o color plano, en modo overlay */
+  --grano-opacidad:  0.12;     /* rango 0.08 a 0.16 */
+  --grano-blend:     overlay;
+
+  /* ── Mesh ─────────────────────────────────────────────────── */
+  /* 2 o 3 colores de la paleta (azul, verde, carbón; el último de fondo), 6 a 9 manchas */
+  --mesh-blur:       0.1;      /* × el lado corto de la pieza */
 
   /* ── Photo overlays ───────────────────────────────────────── */
   /* Azul-tinted overlay for B&W photography (slides, hero) */

@@ -63,8 +63,6 @@ export function Button({
     textDecoration: 'none',
     transition: 'all var(--transition-base)',
     opacity: disabled ? 0.5 : 1,
-    letterSpacing: 'var(--tracking-wider)',
-    textTransform: 'uppercase',
     lineHeight: 1,
     ...sizes[size],
     ...baseVariants[variant],

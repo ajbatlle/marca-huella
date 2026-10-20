@@ -11,7 +11,7 @@
     html, body { width: 1200px; height: 800px; font-family: var(--font-primary); background: var(--color-surface-muted); overflow: hidden; }
     .container { padding: 48px; height: 100%; display: flex; flex-direction: column; gap: 32px; }
     .title { font-size: 28px; font-weight: 600; color: var(--color-text); }
-    .subtitle { font-size: 13px; color: var(--color-text-muted); letter-spacing: 0.5px; text-transform: uppercase; }
+    .subtitle { font-size: 13px; color: var(--color-text-muted);}
     .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; flex: 1; overflow-y: auto; padding-right: 8px; }
     .card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.08); display: flex; flex-direction: column; transition: box-shadow 0.2s; }
     .card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
@@ -20,7 +20,7 @@
     .info { padding: 16px; border-top: 1px solid var(--color-border); }
     .name { font-size: 14px; font-weight: 600; color: var(--color-text); margin-bottom: 4px; }
     .path { font-size: 11px; color: var(--color-text-muted); font-family: 'Monaco', monospace; word-break: break-all; }
-    .status { display: inline-block; margin-top: 8px; padding: 3px 8px; background: var(--hl-verde-mint); color: white; font-size: 10px; font-weight: 600; border-radius: 3px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .status { display: inline-block; margin-top: 8px; padding: 3px 8px; background: var(--hl-verde-mint); color: white; font-size: 10px; font-weight: 600; border-radius: 3px; }
   </style>
 </head>
 <body>

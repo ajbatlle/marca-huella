@@ -34,8 +34,6 @@ export function EjeCard({
             fontWeight: 'var(--font-bold)',
             fontSize: 'var(--text-xs)',
             color: 'var(--color-accent)',
-            letterSpacing: 'var(--tracking-widest)',
-            textTransform: 'uppercase',
             marginBottom: 'var(--space-2)',
           }}>
             Eje {number}
@@ -59,8 +57,6 @@ export function EjeCard({
           fontWeight: 'var(--font-bold)',
           fontSize: 'var(--text-xs)',
           color: linkHovered ? 'var(--color-accent)' : 'var(--color-primary)',
-          letterSpacing: 'var(--tracking-wide)',
-          textTransform: 'uppercase',
           borderTop: '1px solid var(--color-border)',
           paddingTop: 'var(--space-3)',
           marginTop: 'var(--space-4)',

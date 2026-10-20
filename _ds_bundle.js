@@ -62,8 +62,6 @@ function Badge({
     display: 'inline-flex',
     alignItems: 'center',
     borderRadius: 'var(--radius-full)',
-    letterSpacing: 'var(--tracking-wider)',
-    textTransform: 'uppercase',
     lineHeight: 1,
     border: 'none',
     ...sizes[size],
@@ -162,8 +160,6 @@ function Button({
     textDecoration: 'none',
     transition: 'all var(--transition-base)',
     opacity: disabled ? 0.5 : 1,
-    letterSpacing: 'var(--tracking-wider)',
-    textTransform: 'uppercase',
     lineHeight: 1,
     ...sizes[size],
     ...baseVariants[variant],
@@ -324,8 +320,6 @@ function EjeCard({
       fontWeight: 'var(--font-bold)',
       fontSize: 'var(--text-xs)',
       color: 'var(--color-accent)',
-      letterSpacing: 'var(--tracking-widest)',
-      textTransform: 'uppercase',
       marginBottom: 'var(--space-2)'
     }
   }, "Eje ", number), /*#__PURE__*/React.createElement("h3", {
@@ -343,8 +337,6 @@ function EjeCard({
       fontWeight: 'var(--font-bold)',
       fontSize: 'var(--text-xs)',
       color: linkHovered ? 'var(--color-accent)' : 'var(--color-primary)',
-      letterSpacing: 'var(--tracking-wide)',
-      textTransform: 'uppercase',
       borderTop: '1px solid var(--color-border)',
       paddingTop: 'var(--space-3)',
       marginTop: 'var(--space-4)',

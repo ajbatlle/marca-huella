@@ -30,8 +30,6 @@ export function Badge({
     display: 'inline-flex',
     alignItems: 'center',
     borderRadius: 'var(--radius-full)',
-    letterSpacing: 'var(--tracking-wider)',
-    textTransform: 'uppercase',
     lineHeight: 1,
     border: 'none',
     ...sizes[size],

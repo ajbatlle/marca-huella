@@ -52,7 +52,7 @@
   /* Surface */
   --color-surface:           #ffffff;
   --color-surface-muted:     var(--hl-gray-50);
-  --color-surface-raised:    var(--hl-gray-100);
+  --color-surface-raised:    var(--hl-gray-50);   /* un solo gris de fondo */
   --color-surface-primary:   var(--hl-azul-500);
   --color-surface-accent:    var(--hl-naranja-500);
   --color-surface-green:     var(--hl-verde-mint);
@@ -60,7 +60,7 @@
   /* Social post (Instagram) */
   --color-post-frame:        var(--hl-periwinkle);  /* top stripe / pills */
   --color-post-accent:       var(--hl-naranja-500); /* bottom stripe */
-  --color-post-bg:           #F1F1F4;               /* off-white canvas */
+  --color-post-bg:           var(--hl-gray-50);     /* un solo gris de fondo */
 
   /* Border */
   --color-border:             rgba(122, 128, 163, 0.18);
