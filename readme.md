@@ -59,11 +59,14 @@ Las versiones vigentes de cada producto viven en Drive, en `1. Diseño FHL › 0
 | Azul | `#7A80A3` | Color principal: franja superior, fondos de color, lámina frase, cifras secundarias |
 | Naranja | `#E28757` | Acento: cifras protagonistas, barra de realce, franja inferior |
 | Verde | `#8DC899` | El de la huella del logo; tercer color del mesh |
-| Carbón | `#4D4E56` | Texto y títulos; fondo oscuro del mesh y sombra del duotono |
+| Carbón | `#4D4E56` | Texto y títulos; también puede ir en el mesh |
 | Gris de fondo | `#F7F8F9` | El único gris de fondo, para láminas, posts y web |
 | Blanco | `#FFFFFF` | Superficie de láminas y documentos |
 
 - Solo se usan colores de la paleta.
+- El carbón es color de texto, nunca fondo plano de una lámina, bloque o pieza. La única excepción es el mesh, donde el carbón puede ser una de sus manchas o su base. En ningún otro recurso se usa gris.
+- Sobre azul (fondo plano o foto con velo azul) los textos, cifras y líneas van en blanco. El naranja como texto o línea va sobre blanco o gris claro; sobre azul solo como bloque (barra de realce, cuadro de compañía).
+- Los degradés sobre foto son azules (azul de opaco a transparente). Nunca en gris ni en carbón.
 - Si un color no da contraste, se cambia el tamaño o el fondo, nunca el color.
 - Los degradés, cuando se usen, van solo entre colores de la paleta. Para portadas y cierres se prefiere el color plano con grano o el mesh.
 - La escala de grises de `tokens/colors.css` es para bordes, líneas y textos secundarios, no para fondos.
@@ -136,7 +139,7 @@ Un color plano de la paleta con grano y una sola frase grande, en light con las 
 
 ### Barra naranja de realce
 Una palabra o frase corta en blanco sobre un bloque naranja, una vez por pieza.
-- El borde izquierdo del bloque se alinea con el borde izquierdo de las demás líneas del texto; el texto lleva relleno dentro del bloque.
+- El bloque se ajusta al alto de las letras (no a todo el interlineado), con relleno lateral, y lleva esquinas levemente redondeadas (radio 4 px).
 - El bloque nunca se corre fuera de la columna ni queda descuadrado respecto del resto del titular.
 
 ### Cifras protagonistas
@@ -146,7 +149,7 @@ Cifra grande en naranja o carbón con su bajada corta debajo, ordenadas en grill
 Dos o tres fotos lado a lado, sin marco ni radio, separadas por una línea blanca fina, con el pie sobre la foto. Para obras y proyectos.
 
 ### Cuadro de compañía
-Un cuadrado naranja pequeño antes del título, a la altura de la primera línea. Es opcional: acompaña el título de separadores, portadas internas o piezas sueltas.
+Un cuadrado naranja antes del título, de unos dos tercios del cuerpo del título (68 px junto a un título de 96 px), con esquinas levemente redondeadas (radio 4 px), centrado en la primera línea. Los demás cuadrados de marca (marcadores, unidades de un gráfico) llevan el mismo radio leve. Es opcional: acompaña el título de separadores, portadas internas o piezas sueltas.
 
 ### Separador de capítulo
 Foto en duotono a sangre con el nombre del capítulo en grande, en blanco. Puede llevar el cuadro de compañía antes del nombre. Sin número de capítulo.
@@ -157,9 +160,9 @@ Foto en duotono a sangre con el nombre del capítulo en grande, en blanco. Puede
 
 - **Documental, nunca de banco de imágenes.** Personas, obras, instancias participativas, territorios.
 - **Dos tratamientos:**
-  - **Duotono** (sombras carbón, luces azul) para portadas y separadores. El procedimiento de referencia es el de Antonio en Photoshop; está pendiente documentarlo aquí paso a paso.
+  - **Duotono** (sombras azul, luces blanco) para portadas y separadores. El procedimiento de referencia es el de Antonio en Photoshop; está pendiente documentarlo aquí paso a paso.
   - **Color natural** para obras, personas e instancias.
-- Sobre foto, el texto va directo, con un degradé carbón al pie si hace falta para que se lea.
+- Sobre foto, el texto va directo, con un degradé azul si hace falta para que se lea.
 
 ---
 

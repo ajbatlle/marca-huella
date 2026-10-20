@@ -18,7 +18,8 @@ Lo esencial:
 - Franjas por defecto: azul arriba, naranja abajo. Se pueden omitir cuando la pieza lo pide.
 - En láminas y piezas no hay tarjetas con sombra, recuadros redondeados ni paneles de vidrio: se agrupa con línea fina o bloque plano de la paleta.
 - Recursos: mesh con grano, lámina frase, barra naranja de realce alineada al texto, mezcla de pesos, cifras protagonistas, fotos a sangre en serie, cuadro de compañía y separador de capítulo en duotono.
-- Fotos documentales: duotono (carbón y azul) en portadas y separadores; color natural en obras y personas.
+- Fotos documentales: duotono (azul y blanco) en portadas y separadores; color natural en obras y personas.
+- El carbón es solo para texto y títulos (y el mesh): nunca fondo, bloque ni degradé. Los degradés sobre foto son azules.
 - Íconos Material Symbols, siempre con función.
 - Ilustración opcional, de tres tipos (panorámica azul paisaje, panorámica a color de Chile, isométricas). No se dibujan ilustraciones propias.
 - El sistema no guarda cifras de impacto: se toman de la fuente única vigente.
