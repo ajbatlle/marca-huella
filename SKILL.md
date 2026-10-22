@@ -21,5 +21,5 @@ Lo esencial:
 - Fotos documentales: duotono (azul y blanco) en portadas y separadores; color natural en obras y personas.
 - El carbón es solo para texto y títulos (y el mesh): nunca fondo, bloque ni degradé. Los degradés sobre foto son azules.
 - Íconos Material Symbols, siempre con función.
-- Ilustración opcional, de tres tipos (panorámica azul paisaje, panorámica a color de Chile, isométricas). No se dibujan ilustraciones propias.
+- Ilustración opcional, de tres tipos (panorámica azul paisaje, panorámica a color de Chile, isométricas). No se dibujan ilustraciones propias. La panorámica azul de un lugar nuevo se hace desde una foto con el skill `paisaje-grabado` (`skills/paisaje-grabado/`).
 - El sistema no guarda cifras de impacto: se toman de la fuente única vigente.

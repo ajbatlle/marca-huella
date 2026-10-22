@@ -160,7 +160,13 @@ Foto en duotono a sangre con el nombre del capítulo en grande, en blanco. Puede
 
 - **Documental, nunca de banco de imágenes.** Personas, obras, instancias participativas, territorios.
 - **Dos tratamientos:**
-  - **Duotono** (sombras azul, luces blanco) para portadas y separadores. El procedimiento de referencia es el de Antonio en Photoshop; está pendiente documentarlo aquí paso a paso.
+  - **Duotono** (sombras azul, luces blanco) para portadas y separadores. Procedimiento de Antonio en Photoshop:
+    1. Abrir la foto y, en Canales, quedarse con el **verde**.
+    2. **Niveles** sobre el verde: negro 0, medios 0,81, blanco 224. El blanco se ajusta por foto para que el cielo y los grises claros queden lo más blancos posible.
+    3. Cargar el canal como selección e **invertirla**.
+    4. Apagar la capa de la foto, crear una capa blanca debajo y una capa de **color sólido azul** (`#7A80A3`) con la selección como máscara. Antonio usa a veces carbón en vez de azul, según la pieza.
+    - Resultado: color pleno en las sombras, blanco en las luces, sin grises. No se imita con filtros CSS (escala de grises + aclarar da un gris plano).
+    - Receta en código: `Proyectos/energia-que-deja-huella/duotono.mjs` (mismos pasos y valores, con sharp).
   - **Color natural** para obras, personas e instancias.
 - Sobre foto, el texto va directo, con un degradé azul si hace falta para que se lea.
 
@@ -211,11 +217,14 @@ Flechas: `→` en texto, en naranja, o el ícono `arrow_forward`.
 
 La ilustración no es obligatoria en ninguna pieza. Hay tres tipos:
 
-- **Panorámica azul paisaje:** paisaje en línea azul sobre fondo blanco, a sangre al pie de invitaciones y de las láminas de firmas. Archivos: `assets/illustrations/vallenar.png`, `assets/illustrations/mejillones/Mejillones.png`.
+- **Panorámica azul paisaje:** paisaje en línea azul sobre fondo blanco, a sangre al pie de invitaciones y de las láminas de firmas. Archivos: `assets/illustrations/vallenar.png`, `assets/illustrations/mejillones/Mejillones.png`, `assets/illustrations/san-esteban.png`.
+  - **Se puede hacer a partir de cualquier foto** con el skill `paisaje-grabado` (`skills/paisaje-grabado/`). Es un tratamiento de la foto, no un dibujo: líneas de grabado en azul `#7A80A3` curvadas por la propia foto, línea nítida en los bordes y cielo blanco. Nada se mueve de lugar.
+  - Foto ideal: vista ancha y frontal, horizonte a media altura, cerros al fondo, plano abierto al medio, textura adelante, cielo azul despejado y luz pareja. Con cielo nublado se pasa la máscara del cielo de Photoshop (Select › Sky).
+  - El skill también trae la réplica exacta del PSD de Antonio (`--modo psd`: contorno suave azul con velo lila `#D0D1E0`).
 - **Panorámica a color de Chile:** la geografía de norte a sur en color. Archivos: `assets/illustrations/chile-panorama.png`, `assets/illustrations/chile-panorama-lineart.png`. Se pueden hacer otros elementos en este mismo estilo.
 - **Isométricas de usos de espacios:** para mostrar plazas o territorios en uso. Por hacer.
 
-Reglas: la ilustración no se recorta ni lleva texto encima. Claude no dibuja ilustraciones propias; se encargan o se toman de una serie de un mismo autor, recoloreada a la paleta.
+Reglas: la ilustración no se recorta ni lleva texto encima. Claude no dibuja ilustraciones propias; se encargan o se toman de una serie de un mismo autor, recoloreada a la paleta. La panorámica azul hecha desde una foto con `paisaje-grabado` sí vale, porque sale de la foto.
 
 ---
 
@@ -264,6 +273,9 @@ assets/
   partners/                        Logos de aliados (Ministerio de Desarrollo Social)
   paccc/                           Íconos y fondos de PACCC Los Andes
 
+skills/
+  paisaje-grabado/                 Foto de paisaje -> panorámica azul tipo grabado (script, instrucciones y ejemplo)
+
 components/core/                   Componentes web (Button, Badge, Card, StatDisplay, EjeCard, DataTable)
 guidelines/                        Tarjetas de referencia: color, tipografía, espaciado, logo, láminas, documentos, ilustración
 slides/                            Láminas 1280 × 720 (por rehacer con la nueva grilla)
@@ -277,7 +289,7 @@ templates/                         Deck, sitio web, afiche de evento y firma
 
 - **Fuente única de cifras de impacto,** con fecha de corte.
 - **Colores extra en los tokens:** `tokens/colors.css` todavía incluye periwinkle `#8488BC` (marcos de posts), amarillo `#FECC52` y verde musgo `#78AA6D` (logo). Falta decidir si se quedan.
-- **Duotono:** documentar el procedimiento de Photoshop de Antonio y replicarlo.
+- **Duotono en carbón:** Antonio lo usa a veces, pero la regla de color dice que el carbón no va en ningún recurso salvo el mesh. Falta decidir cuál manda.
 - **Íconos:** perfeccionar su uso (tamaños, trazo, cuándo sí y cuándo no).
 - **Ilustraciones isométricas** de usos de espacios.
 - **Láminas y deck del sistema** (`slides/`, `templates/deck-presentacion`): todavía tienen franja verde, degradés y títulos antiguos. Se rehacen con la plantilla de la PPT institucional.
