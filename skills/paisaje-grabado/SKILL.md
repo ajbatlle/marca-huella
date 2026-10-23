@@ -41,13 +41,14 @@ node "<carpeta de este skill>/scripts/paisaje.mjs" "<foto>" "<salida.png>"
 
 - Sin salida, guarda `<foto>-grabado.png` junto a la foto. Trabaja a la resolución de la foto; `--ancho 3000` para otro tamaño (el aspecto se mantiene igual a cualquier tamaño).
 - **Cielo nublado o pálido:** el script avisa ("casi no se detectó cielo azul"). Pídele a Antonio la máscara del cielo: en Photoshop, Select › Sky, rellenar de blanco sobre negro y guardar como PNG. Se pasa con `--mascara cielo.png`. No intentes adivinar el cielo por código: ya se probó y deja bordes escalonados o se come el agua.
-- `--modo psd` da la réplica exacta del PSD de Antonio («ilustración FHL.psd»: contorno suave azul con velo lila `#D0D1E0`). Es su base de Photoshop; la versión por defecto es la aprobada.
+- `--modo psd` da la réplica exacta del PSD de Antonio («ilustración FHL.psd»: contorno suave azul con velo lila `#D0D1E0`). La versión por defecto parte de esa misma base, sin el velo, con cielo blanco y grabado suave.
+- **Para el editor de gráficas** (kit de diálogo): agregar `--transparente`. Sale solo el azul sobre fondo transparente, como las ilustraciones que ya tiene el editor; sobre blanco se ve idéntica a la normal. Funciona con los dos modos. Para sumarla al editor: guardar el PNG como `panorama_<comuna>.png` en `editor-huella/assets/ilustraciones/` y agregar su línea en `ILUSTRACIONES` del `index.html` del editor (con `multiply:true`).
 
 ## 3. Revisar antes de entregar
 
 Mira el resultado completo y un detalle al 100 % junto a la referencia. Revisa:
 - Cielo blanco limpio y una línea fina de horizonte siguiendo la silueta real de los cerros (sin escalones ni mordidas en las cimas).
-- Nieve con detalle, cerros con líneas de grabado curvadas por el relieve.
+- Cerros que se reconocen como en la foto (bosque, quebradas, nieve), con el grabado apenas como textura. Si se ven rayas parejas, algo está mal.
 - Si algo falla, dilo tal cual; no lo presentes como avance.
 
 Límites conocidos (decirlos si aparecen): el contorno de las piedras no sale cerrado como en ChatGPT, porque en la foto el lado iluminado se funde con la piedra vecina; las laderas tienen líneas en una sola dirección general. Si Antonio quiere cerrarlos, se repasan a mano en Photoshop.
@@ -55,8 +56,9 @@ Límites conocidos (decirlos si aparecen): el contorno de las piedras no sale ce
 ## Cómo funciona (por si hay que ajustar)
 
 Equivalente en Photoshop de cada capa, todo en azul `#7A80A3` sobre blanco y solo en la tierra (bajo la línea de cielo):
-1. **Grabado:** líneas horizontales finas curvadas con la propia foto como mapa (Filter › Distort › Displace, mapa = canal verde muy desenfocado) y engrosadas en las sombras (Threshold sobre el tono local).
-2. **Línea nítida:** High Pass del canal verde + Threshold, solo el lado oscuro de cada borde.
-3. **Horizonte:** línea fina en el borde de la máscara de cielo.
+1. **Contorno del PSD de Antonio (lleva la imagen):** foto + copia invertida con Gaussian Blur radio 26 (sobre 5184 px) en Linear Dodge, con su curva de niveles; el resultado invertido es la máscara del azul. Es lo que conserva bosque, quebradas, casas y botes.
+2. **Grabado suave** (`--grab 0.15`): líneas horizontales finas curvadas con la propia foto como mapa (Filter › Distort › Displace) y engrosadas en las sombras. Solo textura: con más fuerza, los cerros oscuros y parejos (bosque) se vuelven rayas y se pierde la imagen; Antonio lo rechazó en Hornopirén.
+3. **Línea nítida** (`--lin 0.8`): High Pass del canal verde + Threshold, solo el lado oscuro de cada borde.
+4. **Horizonte:** línea fina en el borde de la máscara de cielo, solo donde hay un borde real.
 
-Los parámetros escalan con el ancho de la foto (afinados a 2000 px).
+Los parámetros escalan con el ancho de la foto (afinados a 2000 px). Ajustes de fuerza solo si Antonio lo pide, de a uno y con antes/después.

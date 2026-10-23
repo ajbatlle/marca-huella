@@ -218,9 +218,10 @@ Flechas: `→` en texto, en naranja, o el ícono `arrow_forward`.
 La ilustración no es obligatoria en ninguna pieza. Hay tres tipos:
 
 - **Panorámica azul paisaje:** paisaje en línea azul sobre fondo blanco, a sangre al pie de invitaciones y de las láminas de firmas. Archivos: `assets/illustrations/vallenar.png`, `assets/illustrations/mejillones/Mejillones.png`, `assets/illustrations/san-esteban.png`.
-  - **Se puede hacer a partir de cualquier foto** con el skill `paisaje-grabado` (`skills/paisaje-grabado/`). Es un tratamiento de la foto, no un dibujo: líneas de grabado en azul `#7A80A3` curvadas por la propia foto, línea nítida en los bordes y cielo blanco. Nada se mueve de lugar.
+  - **Se puede hacer a partir de cualquier foto** con el skill `paisaje-grabado` (`skills/paisaje-grabado/`). Es un tratamiento de la foto, no un dibujo: parte del contorno azul `#7A80A3` del PSD de Antonio (que conserva la imagen), con un grabado suave curvado por la propia foto, línea nítida en los bordes y cielo blanco. Nada se mueve de lugar.
   - Foto ideal: vista ancha y frontal, horizonte a media altura, cerros al fondo, plano abierto al medio, textura adelante, cielo azul despejado y luz pareja. Con cielo nublado se pasa la máscara del cielo de Photoshop (Select › Sky).
-  - El skill también trae la réplica exacta del PSD de Antonio (`--modo psd`: contorno suave azul con velo lila `#D0D1E0`).
+  - El skill también trae la réplica exacta del PSD de Antonio (`--modo psd`: contorno suave azul con velo lila `#D0D1E0`). El PSD está en `uploads/ilustración FHL.psd`.
+  - Para el editor de gráficas del kit, `--transparente` entrega solo el azul sobre fondo transparente, que es como el editor usa las panorámicas.
 - **Panorámica a color de Chile:** la geografía de norte a sur en color. Archivos: `assets/illustrations/chile-panorama.png`, `assets/illustrations/chile-panorama-lineart.png`. Se pueden hacer otros elementos en este mismo estilo.
 - **Isométricas de usos de espacios:** para mostrar plazas o territorios en uso. Por hacer.
 
